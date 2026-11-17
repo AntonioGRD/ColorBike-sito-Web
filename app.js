@@ -9,16 +9,17 @@
 // 1. CONFIGURATION & STATE
 // =============================================================================
 const CONFIG = {
-  storageKey: 'colorbike_store_v9',
+  storageKey: 'colorbike_store_v10',
   pinStorageKey: 'colorbike_admin_pin',
   defaultPin: '0000',
-  whatsappNumber: '393401234567'
+  whatsappNumber: '393384544717'
 };
 
 const STATE = {
   data: null,
   isAdminUnlocked: false,
   activeFilter: 'tutti',
+  portfolioExpanded: false,
   activeAdminTab: 'tab-services',
   beforeImgData: null,
   afterImgData: null
@@ -54,6 +55,7 @@ async function initAppData() {
   }
 
   renderServices();
+  renderPortfolioSubnav();
   renderPortfolio(STATE.activeFilter);
 }
 
@@ -133,30 +135,97 @@ function renderServices() {
 }
 
 // =============================================================================
-// 5. RENDERING DEL PORTFOLIO "PRIMA & DOPO" CON DUAL SLIDER
+// 5. RENDERING DEL PORTFOLIO "I NOSTRI LAVORI" CON SOTTOCATEGORIE E PAGINAZIONE
 // =============================================================================
+function renderPortfolioSubnav() {
+  const navContainer = document.getElementById('portfolio-subnav');
+  if (!navContainer || !STATE.data || !STATE.data.portfolio) return;
+
+  const subcats = STATE.data.subcategories || [
+    { id: 'tutti', label: 'Tutti i Lavori' },
+    { id: 'moto-stradali', label: 'Moto Stradali' },
+    { id: 'scooter', label: 'Scooter & Maxiscooter' },
+    { id: 'custom-harley', label: 'Custom & Harley' },
+    { id: 'aerografo-cubicatura', label: 'Aerografo & Cubicatura' },
+    { id: 'serbatoi-classic', label: 'Serbatoi & Classic' }
+  ];
+
+  navContainer.innerHTML = '';
+
+  subcats.forEach(sub => {
+    const count = sub.id === 'tutti'
+      ? STATE.data.portfolio.length
+      : STATE.data.portfolio.filter(p => p.category === sub.id).length;
+
+    if (count === 0 && sub.id !== 'tutti') return;
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = `subnav-pill ${STATE.activeFilter === sub.id ? 'active' : ''}`;
+    btn.setAttribute('data-subcat', sub.id);
+    btn.innerHTML = `
+      <span>${escapeHtml(sub.label)}</span>
+      <span class="subnav-count">${count}</span>
+    `;
+
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.subnav-pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      STATE.activeFilter = sub.id;
+      // Per una categoria specifica mostra tutti gli elementi; per 'tutti' parte compatto
+      STATE.portfolioExpanded = (sub.id !== 'tutti');
+      renderPortfolio(sub.id);
+    });
+
+    navContainer.appendChild(btn);
+  });
+}
+
 function renderPortfolio(filterCategory = 'tutti') {
   const container = document.getElementById('portfolio-grid');
+  const expandBox = document.getElementById('portfolio-expand-box');
+  const loadMoreBtn = document.getElementById('btn-portfolio-load-more');
   if (!container || !STATE.data || !STATE.data.portfolio) return;
 
   STATE.activeFilter = filterCategory;
   container.innerHTML = '';
 
-  const items = STATE.data.portfolio.filter(item => {
+  const allFiltered = STATE.data.portfolio.filter(item => {
     if (filterCategory === 'tutti') return true;
     return item.category === filterCategory;
   });
 
-  if (items.length === 0) {
+  if (allFiltered.length === 0) {
     container.innerHTML = `
       <div style="grid-column: span 2; text-align: center; padding: 50px 20px; color: var(--text-dark);">
         <p style="font-size: 1.2rem; font-family: var(--font-tech); text-transform: uppercase;">Nessun lavoro presente in questa categoria.</p>
       </div>
     `;
+    if (expandBox) expandBox.classList.add('hidden');
     return;
   }
 
-  items.forEach(item => {
+  // Paginazione fluida su "Tutti": mostra 6 card iniziali per non appesantire la pagina
+  const PAGE_LIMIT = 6;
+  let itemsToRender = allFiltered;
+  const isCapped = (filterCategory === 'tutti' && !STATE.portfolioExpanded && allFiltered.length > PAGE_LIMIT);
+
+  if (isCapped) {
+    itemsToRender = allFiltered.slice(0, PAGE_LIMIT);
+    if (expandBox && loadMoreBtn) {
+      expandBox.classList.remove('hidden');
+      const remaining = allFiltered.length - PAGE_LIMIT;
+      loadMoreBtn.querySelector('span').textContent = `MOSTRA ALTRI ${remaining} LAVORI DELL'OFFICINA`;
+      loadMoreBtn.onclick = () => {
+        STATE.portfolioExpanded = true;
+        renderPortfolio(filterCategory);
+      };
+    }
+  } else {
+    if (expandBox) expandBox.classList.add('hidden');
+  }
+
+  itemsToRender.forEach(item => {
     const card = document.createElement('article');
     card.className = 'portfolio-item';
     card.setAttribute('data-id', item.id);
@@ -169,20 +238,15 @@ function renderPortfolio(filterCategory = 'tutti') {
       item.beforeImg !== item.afterImg
     );
 
-    const afterSrc = item.afterImg || 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1200&q=80';
+    const afterSrc = item.afterImg || 'hero_ducati_999.jpg';
 
     let stageHtml = '';
     if (hasDualSlider) {
       const beforeSrc = item.beforeImg;
       stageHtml = `
         <div class="slider-stage" data-slider-id="${item.id}">
-          <!-- Immagine PRIMA (sotto) -->
           <img src="${beforeSrc}" alt="Prima: ${escapeHtml(item.title)}" class="stage-img img-before" loading="lazy" />
-          
-          <!-- Immagine DOPO (sopra con clip-path) -->
           <img src="${afterSrc}" alt="Dopo: ${escapeHtml(item.title)}" class="stage-img img-after" loading="lazy" />
-          
-          <!-- Red Laser Divider Handle -->
           <div class="laser-handle">
             <div class="handle-center-puck">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -190,8 +254,6 @@ function renderPortfolio(filterCategory = 'tutti') {
               </svg>
             </div>
           </div>
-
-          <!-- Corner Tags -->
           <span class="ribbon-tag ribbon-before">PRIMA</span>
           <span class="ribbon-tag ribbon-after">DOPO</span>
         </div>

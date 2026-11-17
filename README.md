@@ -86,5 +86,6 @@ ColorBike sito Web/
 - **Ragione Sociale**: ColorBike by CARROZZERIA di GATTO VITTORIO
 - **Indirizzo**: Via Petraro 381, 80050 Santa Maria La Carità (NA)
 - **Partita IVA**: 09180971211
+- **WhatsApp / Cellulare**: [+39 338 454 4717](https://wa.me/393384544717)
 - **Orari di apertura**: Dal lunedì al venerdì 8:30 - 13:00 e 14:30 - 19:00
 - **Social**: [Instagram](https://www.instagram.com/color.bike/) • [TikTok](https://www.tiktok.com/@colorbike) • [Facebook](https://www.facebook.com/p/Colorbike-100055205113946/?locale=it_IT)

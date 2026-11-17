@@ -11,3 +11,6 @@ desktop.ini
 
 # Local test logs
 *.log
+
+# Raw source assets from workshop
+colorbike imagini/

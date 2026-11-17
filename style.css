@@ -833,6 +833,69 @@ textarea {
   box-shadow: 0 0 15px var(--red-glow);
 }
 
+/* Portfolio Subnavigation (Leggera, Compatta, Senza Appesantire) */
+.portfolio-subnav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.subnav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-family: var(--font-tech);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 8px 18px;
+  border-radius: var(--radius-hud);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.subnav-pill:hover {
+  color: var(--text-white);
+  border-color: var(--border-racing);
+  transform: translateY(-1px);
+}
+
+.subnav-pill.active {
+  background: var(--red-racing);
+  color: var(--text-white);
+  border-color: var(--red-racing);
+  box-shadow: 0 0 16px var(--red-glow);
+}
+
+.subnav-count {
+  font-size: 0.75rem;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 2px 7px;
+  border-radius: 10px;
+  color: inherit;
+}
+
+.subnav-pill.active .subnav-count {
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+}
+
+.portfolio-expand-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.portfolio-expand-box.hidden {
+  display: none !important;
+}
+
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1204,6 +1267,19 @@ textarea {
   font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: 0.04em;
+}
+
+.highlight-phone {
+  color: var(--text-white);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.highlight-phone:hover {
+  color: var(--red-racing);
 }
 
 /* Social Media Channels */

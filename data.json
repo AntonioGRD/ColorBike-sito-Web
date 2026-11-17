@@ -3,8 +3,8 @@
     "brand": "ColorBike",
     "subBrand": "CARROZZERIA di GATTO VITTORIO",
     "piva": "09180971211",
-    "whatsapp": "+393401234567",
-    "phone": "+39 081 1234567",
+    "whatsapp": "+39 338 454 4717",
+    "phone": "+39 338 454 4717",
     "email": "info@colorbike.it",
     "address": "Via Petraro 381, 80050 Santa Maria La Carità (NA)",
     "socials": {
@@ -53,7 +53,11 @@
       "title": "Aerografo & Cubicatura",
       "subtitle": "Lavorazioni artistiche a mano libera & idrostampa texture",
       "description": "Decorazioni artistiche ad aerografo di precisione assoluta eseguite artigianalmente a mano ed esclusiva cubicatura (water transfer printing): sfumature tridimensionali, effetti speciali, fiamme, stemmi o applicazione di texture fibra di carbonio (twill, forged), camouflage e finiture tecniche su serbatoi, carene, carter, specchietti e caschi, protette con trasparente 2K ad altissima resistenza.",
-      "tags": ["Aerografia a Mano", "Cubicatura & Carbon Look", "Effetti 3D & Dettagli"]
+      "tags": [
+        "Aerografia a Mano",
+        "Cubicatura & Carbon Look",
+        "Effetti 3D & Dettagli"
+      ]
     },
     {
       "id": 4,
@@ -98,64 +102,190 @@
   "portfolio": [
     {
       "id": 1001,
-      "title": "Ducati Panigale V4 S — Ripristino Carena & Verniciatura",
-      "model": "Ducati Panigale V4 S",
-      "category": "verniciatura",
-      "date": "2026-10-24",
-      "notes": "Carena laterale destra e codino lesionati da una scivolata su asfalto. Saldatura plastica ABS, ricostruzione staffe interne, stuccatura e riverniciatura in Rosso Corsa Ducati originale con finitura lucida a specchio.",
-      "beforeImg": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1200&q=80",
-      "afterImg": "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1200&q=80"
+      "title": "Ducati 999 Testastretta — Verniciatura Integrale Rosso Corsa",
+      "model": "Ducati 999 Testastretta",
+      "category": "moto-stradali",
+      "date": "2026-11-12",
+      "notes": "Verniciatura integrale a forno in Rosso Corsa Ducati originale a specchio. Dettagli telaio a traliccio e forcellone rifiniti, trasparente ceramico UHS ad altissima brillantezza.",
+      "beforeImg": "",
+      "afterImg": "img/portfolio/ducati_999_full.jpg"
     },
     {
       "id": 1002,
-      "title": "Yamaha YZF-R1 — Grafiche Personalizzate & Livrea Special",
-      "model": "Yamaha YZF-R1M",
-      "category": "grafiche",
-      "date": "2026-09-18",
-      "notes": "Grafiche personalizzate con verniciatura satinata nero profondo, loghi sportivi sotto trasparente e dettagli a contrasto ad alta resistenza chimica.",
+      "title": "Ducati Panigale V4 R — Livrea Special Blue & Silver Racing",
+      "model": "Ducati Panigale V4 R",
+      "category": "moto-stradali",
+      "date": "2026-10-28",
+      "notes": "Progetto esclusivo con livrea racing bicolore Blu Metallizzato Profondo e Argento Spazzolato su carene aerodinamiche e ali deportanti, con loghi Ducati Performance sotto trasparente.",
       "beforeImg": "",
-      "afterImg": "https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&w=1200&q=80"
+      "afterImg": "img/portfolio/ducati_panigale_v4r.jpg"
     },
     {
       "id": 1003,
-      "title": "BMW S1000RR — Personalizzazione Totale Moto Stradale",
-      "model": "BMW S1000RR",
-      "category": "personalizzazione",
-      "date": "2026-08-30",
-      "notes": "Personalizzazione totale: verniciatura completa carene e serbatoio con finitura bicolore racing, dettagli cerchi coordinati e protezione ceramica finale.",
+      "title": "Ducati Monster — Cubicatura Idrostampa su Serbatoio",
+      "model": "Ducati Monster",
+      "category": "aerografo-cubicatura",
+      "date": "2026-11-06",
+      "notes": "Verniciatura serbatoio in Rosso Corsa con fascia centrale in cubicatura water transfer printing (texture ingranaggi / carbon look) protetta con trasparente 2K antigraffio.",
       "beforeImg": "",
-      "afterImg": "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1200&q=80"
+      "afterImg": "img/portfolio/ducati_monster_cubicatura.jpg"
     },
     {
       "id": 1004,
-      "title": "Kawasaki Z900 — Dettagli Artistici ad Aerografo & Sfumature 3D",
-      "model": "Kawasaki Z900",
-      "category": "aerografo",
-      "date": "2026-11-05",
-      "notes": "Decorazione serbatoio e puntale eseguita ad aerografo a mano libera con sfumature tridimensionali e giochi di luce su fondo perla, sigillata sotto trasparente lucido a specchio.",
+      "title": "Honda Africa Twin — Verde Smeraldo Perlato & Aerografia",
+      "model": "Honda CRF1100L Africa Twin",
+      "category": "aerografo-cubicatura",
+      "date": "2026-10-18",
+      "notes": "Personalizzazione estetica con vernice metallizzata cangiante Verde Smeraldo Perlato, sfumature scure ad aerografo e loghi grafici 1100 a contrasto sotto trasparente lucido.",
       "beforeImg": "",
-      "afterImg": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1200&q=80"
+      "afterImg": "img/portfolio/africa_twin_aerografo.jpg"
     },
     {
       "id": 1005,
-      "title": "Casco AGV Pista GP — Verniciatura & Grafica Replica Custom",
-      "model": "Casco Integrale AGV",
-      "category": "caschi",
-      "date": "2026-11-10",
-      "notes": "Personalizzazione completa casco: fondo nero metallizzato con dettagli fluorescenti ad aerografo e doppio trasparente ceramico lucido antigraffio.",
+      "title": "Piaggio Runner — Restyling Grigio Nardo & Nero Lucido",
+      "model": "Piaggio / Gilera Runner",
+      "category": "scooter",
+      "date": "2026-11-02",
+      "notes": "Personalizzazione bicolore con verniciatura scudo e manubrio in Grigio Nardo lucido e carene inferiori in Nero Profondo. Finitura coordinata e trasparente ultra-resistente.",
       "beforeImg": "",
-      "afterImg": "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1200&q=80"
+      "afterImg": "img/portfolio/piaggio_runner_nardo.jpg"
     },
     {
       "id": 1006,
-      "title": "Honda CBR 1000RR-R — Ripristino Carene da Incidente",
-      "model": "Honda CBR 1000RR-R",
-      "category": "incidenti",
-      "date": "2026-10-15",
-      "notes": "Ricostruzione totale carene laterali e puntale lesionati da scivolata stradale. Saldatura molecolare staffe interne, riallineamento a telaio e riverniciatura completa.",
-      "beforeImg": "https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?auto=format&fit=crop&w=1200&q=80",
-      "afterImg": "https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&w=1200&q=80"
+      "title": "Honda SH — Verniciatura Personalizzata Giallo Corsa & Nero",
+      "model": "Honda SH 150 / 300",
+      "category": "scooter",
+      "date": "2026-10-22",
+      "notes": "Verniciatura integrale scocca in Giallo Corsa brillante con sottoscocca e particolari in Nero Lucido a contrasto, decalcomanie SH coordinate e trasparente ad elevata brillantezza.",
+      "beforeImg": "",
+      "afterImg": "img/portfolio/honda_sh_yellow.jpg"
+    },
+    {
+      "id": 1007,
+      "title": "Harley-Davidson — Verniciatura Parafango & Filettatura Artigianale",
+      "model": "Harley-Davidson Custom",
+      "category": "custom-harley",
+      "date": "2026-10-14",
+      "notes": "Verniciatura in Blu Elettrico Metallizzato con doppio filetto bianco artigianale eseguito a mano e sigillatura a forno per la massima lucentezza e profondità.",
+      "beforeImg": "",
+      "afterImg": "img/portfolio/harley_blue_pinstripe.jpg"
+    },
+    {
+      "id": 1008,
+      "title": "Harley-Davidson — Cambio Colore Integrale Carrozzeria",
+      "model": "Harley-Davidson Sportster / Dyna",
+      "category": "custom-harley",
+      "date": "2026-09-29",
+      "notes": "Cambio colore completo per serbatoio e parafanghi con rimozione vernice originale, stuccatura di precisione, fondo anticorrosivo e finitura a forno con vernici di alta gamma.",
+      "beforeImg": "",
+      "afterImg": "img/portfolio/harley_cambio_colore.jpg"
+    },
+    {
+      "id": 1009,
+      "title": "Honda CB Four d'Epoca — Oro Metallizzato con Filetti",
+      "model": "Honda CB 500 / 750 Four Classic",
+      "category": "serbatoi-classic",
+      "date": "2026-10-08",
+      "notes": "Restauro conservativo e riverniciatura serbatoio storico in Oro Metallizzato Candy originale Honda con guance nero lucido e doppio filetto bianco di separazione.",
+      "beforeImg": "",
+      "afterImg": "img/portfolio/honda_four_gold.jpg"
+    },
+    {
+      "id": 1010,
+      "title": "BMW K100 — Verniciatura Serbatoio & Ripristino Grafica Storica",
+      "model": "BMW K100 / R Series",
+      "category": "serbatoi-classic",
+      "date": "2026-09-15",
+      "notes": "Riparazione ammaccature, trattamento interno ed esterno del serbatoio, verniciatura fedele al codice storico BMW con ripristino delle filettature bicolore sotto trasparente.",
+      "beforeImg": "",
+      "afterImg": "img/portfolio/bmw_k100_tank.jpg"
+    },
+    {
+      "id": 1011,
+      "title": "Yamaha YZF-R1 — Serbatoio Giallo Fluo & Dettagli Nero",
+      "model": "Yamaha YZF-R1",
+      "category": "moto-stradali",
+      "date": "2026-11-09",
+      "notes": "Verniciatura ad alta visibilità in Giallo Fluo brillante multistrato con logo diapason Yamaha aerografato in nero lucido sotto trasparente antigraffio.",
+      "beforeImg": "",
+      "afterImg": "img/portfolio/yamaha_r1_fluo.jpg"
+    },
+    {
+      "id": 1012,
+      "title": "Yamaha MT-01 — Personalizzazione Deep Grey & Black",
+      "model": "Yamaha MT-01",
+      "category": "moto-stradali",
+      "date": "2026-10-05",
+      "notes": "Restyling totale di maxi-naked: combinazione cromatica esclusiva con finitura satinata e lucida, cover serbatoio e codone coordinati.",
+      "beforeImg": "",
+      "afterImg": "img/portfolio/yamaha_mt01_custom.jpg"
+    },
+    {
+      "id": 1013,
+      "title": "Buell XB — Verniciatura Carene & Telaio",
+      "model": "Buell XB12 / XB9",
+      "category": "moto-stradali",
+      "date": "2026-09-20",
+      "notes": "Verniciatura completa airbox cover, cupolino e puntale motore con tinte resistenti agli sbalzi termici e massima aderenza su plastiche tecniche.",
+      "beforeImg": "",
+      "afterImg": "img/portfolio/buell_xb_custom.jpg"
+    },
+    {
+      "id": 1014,
+      "title": "Triumph Speed Triple — Verniciatura Integrale Special",
+      "model": "Triumph Speed Triple",
+      "category": "moto-stradali",
+      "date": "2026-09-12",
+      "notes": "Personalizzazione verniciatura a specchio per carrozzeria e dettagli metallici con ciclo termico a 65°C e finitura antiriflesso sui dettagli d'ombra.",
+      "beforeImg": "",
+      "afterImg": "img/portfolio/triumph_speed_custom.jpg"
+    },
+    {
+      "id": 1015,
+      "title": "Kawasaki Ninja — Verniciatura Carene & Puntale",
+      "model": "Kawasaki Ninja",
+      "category": "moto-stradali",
+      "date": "2026-10-30",
+      "notes": "Riverniciatura ad alta resistenza con ripristino staffe e finitura a specchio protetta contro detriti stradali e raggi UV.",
+      "beforeImg": "",
+      "afterImg": "img/portfolio/kawasaki_custom.jpg"
+    },
+    {
+      "id": 1016,
+      "title": "Kawasaki Vintage — Serbatoio Bicolore con Filetti",
+      "model": "Kawasaki Z / Classic",
+      "category": "serbatoi-classic",
+      "date": "2026-09-05",
+      "notes": "Stuccatura serbatoio, raddrizzatura botte da caduta e verniciatura bicolore con trasparente UHS ad alto spessore.",
+      "beforeImg": "",
+      "afterImg": "img/portfolio/kawasaki_tank_special.jpg"
     }
   ],
-  "adminPin": "0000"
+  "adminPin": "0000",
+  "subcategories": [
+    {
+      "id": "tutti",
+      "label": "Tutti i Lavori"
+    },
+    {
+      "id": "moto-stradali",
+      "label": "Moto Stradali"
+    },
+    {
+      "id": "scooter",
+      "label": "Scooter & Maxiscooter"
+    },
+    {
+      "id": "custom-harley",
+      "label": "Custom & Harley"
+    },
+    {
+      "id": "aerografo-cubicatura",
+      "label": "Aerografo & Cubicatura"
+    },
+    {
+      "id": "serbatoi-classic",
+      "label": "Serbatoi & Classic"
+    }
+  ]
 }

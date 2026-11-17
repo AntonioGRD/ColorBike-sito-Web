@@ -79,8 +79,8 @@
 
     <!-- Hero Background Visual (Sportbike in dark workshop) -->
     <div class="hero-bg-visual" aria-hidden="true">
-      <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=2000&q=85"
-        alt="Sportbike Stradale in Carrozzeria" class="hero-bg-img" />
+      <img src="hero_ducati_999.jpg"
+        alt="Ducati 999 Testastretta - Verniciatura Completa ColorBike" class="hero-bg-img" />
       <div class="hero-overlay-dark"></div>
       <div class="hero-laser-line"></div>
     </div>
@@ -219,9 +219,24 @@
         <div class="red-glow-separator"></div>
       </div>
 
+      <!-- Subcategory Tabs Bar (Leggera e Veloce) -->
+      <div class="portfolio-subnav" id="portfolio-subnav">
+        <!-- Generato dinamicamente con badge conteggio da app.js -->
+      </div>
+
       <!-- Portfolio Grid -->
       <div class="portfolio-grid" id="portfolio-grid">
         <!-- Card dinamiche generate da app.js -->
+      </div>
+
+      <!-- Pulsante Espandi / Mostra Altri Lavori -->
+      <div class="portfolio-expand-box" id="portfolio-expand-box">
+        <button type="button" class="btn-racing-ghost" id="btn-portfolio-load-more">
+          <span>MOSTRA ALTRI LAVORI</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="m6 9 6 6 6-6"/>
+          </svg>
+        </button>
       </div>
 
     </div>
@@ -283,13 +298,13 @@
           </a>
         </div>
 
-        <a href="https://wa.me/393401234567?text=Ciao%20ColorBike!%20Vorrei%20inviarvi%20le%20foto%20della%20mia%20moto%20per%20un%20preventivo."
+        <a href="https://wa.me/393384544717?text=Ciao%20ColorBike!%20Vorrei%20inviarvi%20le%20foto%20della%20mia%20moto%20per%20un%20preventivo."
           target="_blank" rel="noopener noreferrer" class="btn-whatsapp-direct">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
             <path
               d="M12.031 2C6.516 2 2.016 6.5 2.016 12.016c0 1.968.563 3.828 1.641 5.422L2 22l4.703-1.609c1.531.938 3.328 1.453 5.328 1.453 5.516 0 10.016-4.5 10.016-10.016S17.547 2 12.031 2zm0 18.281c-1.734 0-3.328-.484-4.703-1.359l-.328-.203-2.813.969.969-2.75-.219-.344C4.016 15.25 3.531 13.688 3.531 12c0-4.688 3.813-8.5 8.5-8.5 4.688 0 8.5 3.813 8.5 8.5s-3.812 8.281-8.5 8.281zm4.656-6.203c-.25-.125-1.5-.75-1.734-.844-.234-.094-.406-.141-.578.141s-.672.844-.828 1.016c-.156.172-.313.203-.563.078-.25-.125-1.063-.391-2.031-1.25-.75-.672-1.266-1.5-1.422-1.75-.156-.25-.016-.391.109-.516.109-.109.25-.281.375-.422.125-.141.172-.234.25-.391.078-.156.047-.313-.016-.438-.078-.125-.578-1.406-.797-1.922-.219-.516-.438-.453-.594-.453h-.516c-.172 0-.453.063-.688.328-.234.266-.906.891-.906 2.172s.938 2.516 1.063 2.688c.125.172 1.844 2.813 4.469 3.953.625.266 1.109.438 1.484.563.625.203 1.203.172 1.656.109.516-.078 1.5-.609 1.719-1.203.219-.594.219-1.109.156-1.219-.063-.109-.234-.172-.484-.297z" />
           </svg>
-          <span>INVIA FOTO DANNI SU WHATSAPP</span>
+          <span>INVIA FOTO DANNI SU WHATSAPP (+39 338 454 4717)</span>
         </a>
       </div>
 
@@ -300,6 +315,15 @@
           <li><span>Lunedì - Venerdì:</span> <strong>08:30 - 13:00 | 14:30 - 19:00</strong></li>
           <li><span>Sabato &amp; Domenica:</span> <strong class="text-red">Chiuso</strong></li>
         </ul>
+        <div class="contact-meta-item">
+          <span class="meta-label">
+            <svg class="meta-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            WHATSAPP / TEL:
+          </span>
+          <a href="https://wa.me/393384544717" target="_blank" rel="noopener noreferrer" class="meta-val highlight-phone">+39 338 454 4717</a>
+        </div>
         <div class="contact-meta-item">
           <span class="meta-label">
             <svg class="meta-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -416,7 +440,7 @@
           </div>
           <div class="form-group">
             <label for="qf-phone">Recapito Telefonico *</label>
-            <input type="tel" id="qf-phone" class="rf-input" placeholder="Es. 340 1234567" required />
+            <input type="tel" id="qf-phone" class="rf-input" placeholder="Es. 338 454 4717" required />
           </div>
         </div>
 
