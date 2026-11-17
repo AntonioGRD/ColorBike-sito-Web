@@ -2434,6 +2434,26 @@ textarea {
     border-bottom: 1px solid var(--border-subtle);
   }
 
+  /* Hero Telemetry Mobile Stacking */
+  .hero-telemetry {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .telemetry-badge {
+    font-size: 0.74rem;
+    padding: 5px 12px;
+    line-height: 1.35;
+  }
+
+  .telemetry-coords {
+    font-size: 0.74rem;
+    padding-left: 2px;
+  }
+
   .section-about {
     padding: 60px 0;
   }
