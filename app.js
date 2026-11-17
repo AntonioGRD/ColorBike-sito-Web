@@ -900,7 +900,9 @@ function getFallbackData() {
   return {
     meta: {
       brand: "ColorBike",
-      subBrand: "Carrozzeria Gatto",
+      subBrand: "CARROZZERIA di GATTO VITTORIO",
+      piva: "09180971211",
+      address: "Via Petraro 381, 80050 Santa Maria La Carità (NA)",
       whatsapp: "+393401234567"
     },
     services: [

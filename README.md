@@ -1,8 +1,8 @@
-# ColorBike — Carrozzeria Gatto 🏍️💨
+# ColorBike by CARROZZERIA di GATTO VITTORIO 🏍️💨
 
-Web Application ad alte prestazioni sviluppata per **ColorBike (Carrozzeria Gatto)**, officina specializzata in verniciatura a forno, riparazione carene in ABS/compositi e personalizzazioni estetiche per moto stradali.
+Web Application ad alte prestazioni sviluppata per **ColorBike by CARROZZERIA di GATTO VITTORIO** (Via Petraro 381, 80050 Santa Maria La Carità NA • P.IVA 09180971211), officina specializzata in verniciatura a forno, riparazione carene in ABS/compositi e rifinitura estetica per moto stradali.
 
-![ColorBike Logo](logo_transparent.png)
+![ColorBike Logo](logo_horizontal_transparent.png)
 
 ---
 

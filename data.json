@@ -1,17 +1,18 @@
 {
   "meta": {
     "brand": "ColorBike",
-    "subBrand": "Carrozzeria Gatto",
+    "subBrand": "CARROZZERIA di GATTO VITTORIO",
+    "piva": "09180971211",
     "whatsapp": "+393401234567",
-    "phone": "+39 011 9876543",
+    "phone": "+39 081 1234567",
     "email": "info@colorbike.it",
-    "address": "Via Torino 42, Rivalta di Torino (TO)",
+    "address": "Via Petraro 381, 80050 Santa Maria La Carità (NA)",
     "hours": {
-      "weekdays": "Lun - Ven: 08:30 - 12:30 | 14:00 - 18:30",
-      "saturday": "Sabato: 08:30 - 12:30 (su appuntamento)",
+      "weekdays": "Lun - Ven: 08:30 - 13:00 | 14:30 - 19:00",
+      "saturday": "Sabato: Chiuso",
       "sunday": "Domenica: Chiuso"
     },
-    "version": "2.1.0"
+    "version": "2.2.0"
   },
   "services": [
     {

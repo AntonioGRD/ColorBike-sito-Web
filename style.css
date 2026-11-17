@@ -1119,7 +1119,68 @@ textarea {
   color: var(--text-primary);
 }
 
+.highlight-piva-sm {
+  color: var(--red-racing);
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+/* Commercial Info Box */
+.commercial-info-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-racing);
+  border-radius: var(--radius-hud);
+  padding: 14px 16px;
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.comm-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.88rem;
+}
+
+.comm-label {
+  color: var(--text-dark);
+  font-family: var(--font-tech);
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.comm-val {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.highlight-piva {
+  color: var(--red-racing);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  letter-spacing: 0.12em;
+}
+
 /* Quick Form in Footer */
+.footer-form-wrapper {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mini-form-title {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--red-racing);
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
 .quick-form {
   display: flex;
   flex-direction: column;
@@ -1142,6 +1203,78 @@ textarea {
   outline: none;
   border-color: var(--red-racing);
   box-shadow: 0 0 10px var(--red-glow);
+}
+
+/* Footer Google Maps Card */
+.footer-map-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-racing);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px var(--red-glow);
+  display: flex;
+  flex-direction: column;
+}
+
+.map-frame-wrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background: #121217;
+}
+
+.map-frame-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: contrast(105%) saturate(110%);
+}
+
+.map-card-footer {
+  padding: 14px 16px;
+  background: #0D0D12;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.map-address-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--text-white);
+  font-weight: 500;
+}
+
+.map-address-badge svg {
+  color: var(--red-racing);
+  flex-shrink: 0;
+}
+
+.btn-map-directions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--red-racing), var(--red-deep));
+  color: var(--text-white);
+  padding: 10px 16px;
+  font-family: var(--font-tech);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  border-radius: var(--radius-hud);
+  box-shadow: 0 4px 14px var(--red-glow);
+  text-decoration: none;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn-map-directions:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(225, 29, 72, 0.6);
+  color: var(--text-white);
 }
 
 .footer-bottom {
@@ -1829,7 +1962,7 @@ textarea {
     grid-template-columns: 1fr 1fr;
   }
 
-  .form-col {
+  .map-col {
     grid-column: span 2;
   }
 }
@@ -1912,7 +2045,7 @@ textarea {
     grid-template-columns: 1fr;
   }
 
-  .form-col {
+  .map-col {
     grid-column: span 1;
   }
 
