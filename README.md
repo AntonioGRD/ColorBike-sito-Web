@@ -1,6 +1,6 @@
 # ColorBike by CARROZZERIA di GATTO VITTORIO 🏍️💨
 
-Web Application ad alte prestazioni sviluppata per **ColorBike by CARROZZERIA di GATTO VITTORIO** (Via Petraro 381, 80050 Santa Maria La Carità NA • P.IVA 09180971211), officina specializzata in verniciatura moto e scooter a forno, grafiche personalizzate, aerografo e personalizzazione totale per moto stradali.
+Web Application ad alte prestazioni sviluppata per **ColorBike by CARROZZERIA di GATTO VITTORIO** (Via Petraro 381, 80050 Santa Maria La Carità NA • P.IVA 09180971211), officina specializzata in verniciatura moto e scooter a forno, grafiche personalizzate, aerografo, personalizzazione totale moto, verniciatura caschi e riparazione carene in caso di incidenti.
 
 ![ColorBike Logo](logo_horizontal_transparent.png)
 
@@ -11,15 +11,20 @@ Web Application ad alte prestazioni sviluppata per **ColorBike by CARROZZERIA di
 - **Design System Dark-Racing**:
   - Palette cromatica: Nero Asfalto (`#09090B`), Grigio Tecnico (`#A1A1AA`) e Rosso Corsa (`#DC2626` / `#E11D48`).
   - Font tecnici: **Orbitron** (display aggressivo), **Rajdhani** (tipografia sportiva) e **Inter** (massima leggibilità).
-  - Emblema circolare centrale in risalto con finiture rosse Ducati, anello telemetrico e raccordi aerodinamici.
+  - Logo orizzontale trasparente con telemetria e raccordi aerodinamici nella barra superiore.
   
 - **Hero Section**:
   - Box officina racing con illuminazione d'atmosfera e superbike sportiva ad altissima risoluzione.
+  - Badge di telemetria per le 6 specializzazioni ufficiali.
   - Pulsante interattivo *Configura la tua moto* con form preventivo e redirect rapido WhatsApp.
 
-- **Sezione Servizi a 6 Slot**:
-  - 3 servizi attivi con specifiche tecniche e badge di telemetria.
-  - 3 slot disponibili con bordo tratteggiato *"Servizio in Arrivo"*, configurabili direttamente dal pannello di gestione.
+- **Sezione Servizi & Specializzazioni (6 Schede Attive, Zero Slot Vuoti)**:
+  1. Verniciatura Moto e Scooter (Ciclo termico a forno a 65°C)
+  2. Grafiche Personalizzate (Livree su misura e loghi sotto trasparente)
+  3. Aerografo (Lavorazioni artistiche a mano libera, sfumature 3D)
+  4. Personalizzazione Totale Moto (Restyling estetico completo a 360°)
+  5. Verniciatura Caschi (Integrali, jet e modulari, grafiche replica)
+  6. Riparazione in caso di Incidenti (Saldatura ABS, raddrizzatura serbatoi)
 
 - **Gallery "Prima & Dopo" Interattiva**:
   - Slider con laser divider centrale trascinabile (mouse e touch screen) per confrontare carene prima e dopo la lavorazione.

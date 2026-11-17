@@ -53,21 +53,21 @@
     },
     {
       "id": 5,
-      "status": "empty",
-      "icon": "plus",
-      "title": "Slot Disponibile",
-      "subtitle": "Nuovo servizio in arrivo",
-      "description": "Questo slot è libero per un nuovo servizio dell'officina. Personalizzalo in qualsiasi momento aprendo il Pannello Gestione (Ctrl+Shift+A).",
-      "tags": ["Configurabile da Admin"]
+      "status": "active",
+      "icon": "helmet",
+      "title": "Verniciatura Caschi",
+      "subtitle": "Personalizzazione caschi moto & scooter",
+      "description": "Verniciatura professionale e personalizzazione grafica per caschi integrali, modulari e jet. Ripristino colore, livree replica racing, aerografie, loghi, nomi e numeri pilota con vernici di alta gamma e trasparente ceramico ad altissima resistenza.",
+      "tags": ["Caschi Integrali & Jet", "Livree Pilota Replica", "Trasparente Ultra-Resistente"]
     },
     {
       "id": 6,
-      "status": "empty",
-      "icon": "plus",
-      "title": "Slot Disponibile",
-      "subtitle": "Nuovo servizio in arrivo",
-      "description": "Questo slot è libero per un nuovo servizio dell'officina. Personalizzalo in qualsiasi momento aprendo il Pannello Gestione (Ctrl+Shift+A).",
-      "tags": ["Configurabile da Admin"]
+      "status": "active",
+      "icon": "shield",
+      "title": "Riparazione in caso di Incidenti",
+      "subtitle": "Ripristino carene, saldatura plastiche & serbatoi",
+      "description": "Gestione e ripristino completo del danno da incidente, caduta o scivolata: saldatura plastica molecolare per carene OEM in ABS, ricostruzione staffe e ganci rotti, raddrizzatura e stuccatura serbatoi, recupero o sostituzione pezzi danneggiati.",
+      "tags": ["Saldatura Plastica ABS", "Ricostruzione Staffe", "Danni da Incidente"]
     }
   ],
   "portfolio": [
@@ -110,6 +110,26 @@
       "notes": "Decorazione serbatoio e puntale eseguita ad aerografo a mano libera con sfumature tridimensionali e giochi di luce su fondo perla, sigillata sotto trasparente lucido a specchio.",
       "beforeImg": "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1200&q=80",
       "afterImg": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "id": 1005,
+      "title": "Casco AGV Pista GP — Verniciatura & Grafica Replica Custom",
+      "model": "Casco Integrale AGV",
+      "category": "caschi",
+      "date": "2026-11-10",
+      "notes": "Personalizzazione completa casco: fondo nero metallizzato con dettagli fluorescenti ad aerografo e doppio trasparente ceramico lucido antigraffio.",
+      "beforeImg": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1200&q=80",
+      "afterImg": "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "id": 1006,
+      "title": "Honda CBR 1000RR-R — Ripristino Carene da Incidente",
+      "model": "Honda CBR 1000RR-R",
+      "category": "incidenti",
+      "date": "2026-10-15",
+      "notes": "Ricostruzione totale carene laterali e puntale lesionati da scivolata stradale. Saldatura molecolare staffe interne, riallineamento a telaio e riverniciatura completa.",
+      "beforeImg": "https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?auto=format&fit=crop&w=1200&q=80",
+      "afterImg": "https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&w=1200&q=80"
     }
   ],
   "adminPin": "0000"

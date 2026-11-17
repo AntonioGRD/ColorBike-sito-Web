@@ -9,7 +9,7 @@
 // 1. CONFIGURATION & STATE
 // =============================================================================
 const CONFIG = {
-  storageKey: 'colorbike_store_v4',
+  storageKey: 'colorbike_store_v5',
   pinStorageKey: 'colorbike_admin_pin',
   defaultPin: '0000',
   whatsappNumber: '393401234567'
@@ -87,6 +87,8 @@ function getServiceSvgIcon(type) {
     case 'tuning':
     case 'sparkles':
       return `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/></svg>`;
+    case 'helmet':
+      return `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a9 9 0 0 0-9 9v3a3 3 0 0 0 3 3h1v-4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v4h1a3 3 0 0 0 3-3v-3a9 9 0 0 0-9-9z"/><path d="M7 12h10v5H7z"/><circle cx="12" cy="14.5" r="1"/></svg>`;
     case 'wrench':
       return `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>`;
     case 'bolt':
@@ -97,7 +99,7 @@ function getServiceSvgIcon(type) {
 }
 
 // =============================================================================
-// 4. RENDERING DEI SERVIZI (6 SLOT RACING TELEMETRICI)
+// 4. RENDERING DEI SERVIZI (SPECIALIZZAZIONI UFFICIALI)
 // =============================================================================
 function renderServices() {
   const container = document.getElementById('services-grid');
@@ -105,49 +107,28 @@ function renderServices() {
 
   container.innerHTML = '';
 
-  STATE.data.services.forEach((service, index) => {
+  // Filtra per mostrare esclusivamente i servizi attivi (nessuno slot vuoto)
+  const activeServices = STATE.data.services.filter(s => s.status === 'active');
+
+  activeServices.forEach((service, index) => {
     const slotNumber = String(index + 1).padStart(2, '0');
-
-    if (service.status === 'active') {
-      const card = document.createElement('div');
-      card.className = 'service-card';
-      card.innerHTML = `
-        <div class="card-header-telemetry">
-          <div class="card-icon-wrap">
-            ${getServiceSvgIcon(service.icon)}
-          </div>
-          <span class="card-status-badge">[ SLOT ${slotNumber} // ATTIVO ]</span>
+    const card = document.createElement('div');
+    card.className = 'service-card';
+    card.innerHTML = `
+      <div class="card-header-telemetry">
+        <div class="card-icon-wrap">
+          ${getServiceSvgIcon(service.icon)}
         </div>
-        <h3 class="card-title">${escapeHtml(service.title)}</h3>
-        ${service.subtitle ? `<div class="card-subtitle">${escapeHtml(service.subtitle)}</div>` : ''}
-        <p class="card-desc">${escapeHtml(service.description)}</p>
-        <div class="card-tags">
-          ${(service.tags || []).map(tag => `<span class="tag-pill">${escapeHtml(tag)}</span>`).join('')}
-        </div>
-      `;
-      container.appendChild(card);
-    } else {
-      // Slot Vuoto / In Arrivo
-      const emptyCard = document.createElement('div');
-      emptyCard.className = 'service-card empty-slot';
-      emptyCard.setAttribute('data-slot-id', service.id);
-      emptyCard.innerHTML = `
-        <div class="empty-slot-icon">+</div>
-        <div class="empty-slot-title">SLOT ${slotNumber} • DISPONIBILE</div>
-        <div class="empty-slot-desc">${escapeHtml(service.description || 'Servizio in arrivo. Personalizzabile da Pannello Gestione.')}</div>
-        <button type="button" class="empty-slot-btn">MODIFICA DA PANNELLO</button>
-      `;
-
-      emptyCard.addEventListener('click', () => {
-        openAdminPanel();
-        if (STATE.isAdminUnlocked) {
-          switchAdminTab('tab-services');
-          openServiceEditor(service.id);
-        }
-      });
-
-      container.appendChild(emptyCard);
-    }
+        <span class="card-status-badge">[ SPECIALIZZAZIONE ${slotNumber} ]</span>
+      </div>
+      <h3 class="card-title">${escapeHtml(service.title)}</h3>
+      ${service.subtitle ? `<div class="card-subtitle">${escapeHtml(service.subtitle)}</div>` : ''}
+      <p class="card-desc">${escapeHtml(service.description)}</p>
+      <div class="card-tags">
+        ${(service.tags || []).map(tag => `<span class="tag-pill">${escapeHtml(tag)}</span>`).join('')}
+      </div>
+    `;
+    container.appendChild(card);
   });
 }
 
@@ -918,8 +899,8 @@ function getFallbackData() {
       { id: 2, status: "active", icon: "flag", title: "Grafiche Personalizzate", description: "Design e livree racing o stradali su misura sigillate sotto trasparente.", tags: ["Livree", "Loghi"] },
       { id: 3, status: "active", icon: "brush", title: "Aerografo", description: "Lavorazioni artistiche a mano libera, sfumature 3D ed effetti speciali.", tags: ["Aerografia", "Caschi & Serbatoi"] },
       { id: 4, status: "active", icon: "tuning", title: "Personalizzazione Totale Moto", description: "Restyling estetico completo a 360° per moto stradali e maxiscooter.", tags: ["Restyling 360°", "Cambi Colore"] },
-      { id: 5, status: "empty", icon: "plus", title: "Slot Disponibile", description: "Servizio in arrivo.", tags: [] },
-      { id: 6, status: "empty", icon: "plus", title: "Slot Disponibile", description: "Servizio in arrivo.", tags: [] }
+      { id: 5, status: "active", icon: "helmet", title: "Verniciatura Caschi", description: "Personalizzazione grafica e verniciatura caschi integrali, jet e modulari.", tags: ["Caschi", "Livree Pilota"] },
+      { id: 6, status: "active", icon: "shield", title: "Riparazione in caso di Incidenti", description: "Ripristino carene da scivolata, saldatura plastiche ABS e stuccatura serbatoi.", tags: ["Saldatura ABS", "Ripristino Danni"] }
     ],
     portfolio: [],
     adminPin: "0000"
