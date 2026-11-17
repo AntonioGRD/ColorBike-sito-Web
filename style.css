@@ -574,6 +574,204 @@ textarea {
 }
 
 /* =========================================================
+   2B. SECTION ABOUT "CHI SIAMO" (Storia & Tradizione)
+   ========================================================= */
+.section-about {
+  padding: 100px 0;
+  position: relative;
+  z-index: 2;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.18fr 0.82fr;
+  gap: 36px;
+  align-items: stretch;
+}
+
+.about-story-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  padding: 38px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.about-story-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--red-racing), transparent 90%);
+}
+
+.about-story-card:hover {
+  border-color: var(--border-racing);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6), 0 0 16px rgba(225, 29, 72, 0.15);
+}
+
+.about-badge-wrap {
+  margin-bottom: 18px;
+}
+
+.about-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  color: var(--red-racing);
+  background: var(--red-subtle);
+  border: 1px solid var(--border-racing);
+  padding: 6px 14px;
+  border-radius: var(--radius-hud);
+}
+
+.about-story-title {
+  font-family: var(--font-tech);
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1.28;
+  color: var(--text-white);
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.about-story-text {
+  font-family: var(--font-body);
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+.about-highlights-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-subtle);
+  gap: 16px;
+  margin-top: auto;
+}
+
+.about-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: var(--text-white);
+  line-height: 1.1;
+  background: linear-gradient(90deg, #FFFFFF 20%, var(--red-racing) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-lbl {
+  font-family: var(--font-tech);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.about-stat-sep {
+  width: 1px;
+  height: 38px;
+  background: var(--border-subtle);
+}
+
+/* Milestone Cards Stack on Right */
+.about-milestones-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.milestone-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  padding: 24px 28px;
+  position: relative;
+  transition: all var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.milestone-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-racing);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4), 0 0 16px var(--red-glow);
+}
+
+.milestone-card.active-today {
+  border-left: 3px solid var(--red-racing);
+  background: linear-gradient(135deg, rgba(22, 22, 29, 0.98), rgba(42, 18, 25, 0.45));
+}
+
+.milestone-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.milestone-year {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-white);
+  letter-spacing: 0.05em;
+}
+
+.milestone-year.highlight-red {
+  color: var(--red-racing);
+  text-shadow: 0 0 12px var(--red-glow);
+}
+
+.milestone-tag {
+  font-family: var(--font-tech);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 3px 10px;
+  border-radius: var(--radius-hud);
+  border: 1px solid var(--border-subtle);
+}
+
+.milestone-desc {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* =========================================================
    3. SECTION SERVICES (6 Slots HUD)
    ========================================================= */
 .section-services,
@@ -2234,6 +2432,40 @@ textarea {
     font-weight: 700;
     padding: 8px 0;
     border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .section-about {
+    padding: 60px 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-story-card {
+    padding: 26px 20px;
+  }
+
+  .about-story-title {
+    font-size: 1.35rem;
+  }
+
+  .about-highlights-strip {
+    gap: 8px;
+    padding-top: 18px;
+  }
+
+  .stat-num {
+    font-size: 1.35rem;
+  }
+
+  .stat-lbl {
+    font-size: 0.72rem;
+  }
+
+  .milestone-card {
+    padding: 20px 18px;
   }
 
   .services-grid {
