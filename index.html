@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ColorBike — Carrozzeria Gatto • Linea Moto</title>
+  <meta name="description"
+    content="ColorBike (Carrozzeria Gatto - Linea Moto). Specializzati in verniciatura a forno, riparazione carene in ABS/vetroresina e livree racing per moto da pista e stradali." />
+  <meta name="theme-color" content="#09090B" />
+
+  <!-- Fonts: Orbitron (Aggressive Racing Display), Rajdhani (Technical Sports), Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@600;700;800;900&family=Rajdhani:ital,wght@0,600;0,700;1,700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="racing-dark">
+
+  <!-- HUD Telemetry Grid Ambient -->
+  <div class="hud-grid-ambient" aria-hidden="true"></div>
+  <div class="hud-spotlight-top" aria-hidden="true"></div>
+
+  <!-- =========================================================
+       1. NAVBAR
+       ========================================================= -->
+  <header class="site-header" id="navbar">
+    <div class="nav-container">
+
+      <!-- Left Navigation Links (All 3 Sections) -->
+      <nav class="nav-left" aria-label="Menu Principale Sinistra">
+        <a href="#services" class="nav-item"><span class="nav-num">01</span> SERVIZI</a>
+        <a href="#portfolio" class="nav-item"><span class="nav-num">02</span> PRIMA &amp; DOPO</a>
+        <a href="#contacts" class="nav-item"><span class="nav-num">03</span> CONTATTI</a>
+      </nav>
+
+      <!-- Center Red-Contoured Circle Emblem (Integrated Racing Podium) -->
+      <a href="#hero" class="nav-center-emblem" aria-label="ColorBike Home">
+        <div class="emblem-wings-line left-wing" aria-hidden="true"></div>
+        <div class="emblem-circle-outer">
+          <!-- Outer Neon Bezel & Tech Ring -->
+          <div class="emblem-tech-ring" aria-hidden="true"></div>
+          <div class="emblem-circle-inner">
+            <img src="logo_transparent.png" alt="ColorBike - Carrozzeria Gatto • Linea Moto" class="emblem-logo-img" />
+          </div>
+          <div class="emblem-glow-ring" aria-hidden="true"></div>
+          <!-- Integrated Bottom Brand Ribbon -->
+          <span class="emblem-bottom-ribbon">LINEA MOTO</span>
+        </div>
+        <div class="emblem-wings-line right-wing" aria-hidden="true"></div>
+      </a>
+
+      <!-- Right Navigation Actions -->
+      <div class="nav-right">
+        <button type="button" class="btn-racing-cta" id="btn-open-quote">
+          <span class="btn-glow-line"></span>
+          <span class="btn-text">RICHIEDI PREVENTIVO</span>
+          <svg class="btn-icon-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </button>
+
+        <!-- Admin Gear Toggle -->
+        <button type="button" class="btn-gear" id="btn-admin-trigger" title="Pannello Gestione (Ctrl+Shift+A)"
+          aria-label="Accesso Pannello Gestione">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path
+              d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+            </path>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button type="button" class="btn-mobile-toggle" id="btn-mobile-toggle" aria-label="Apri Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <a href="#services" class="mobile-nav-link">SERVIZI</a>
+      <a href="#portfolio" class="mobile-nav-link">PRIMA & DOPO</a>
+      <a href="#contacts" class="mobile-nav-link">CONTATTI</a>
+      <button type="button" class="btn-racing-cta w-full" id="btn-mobile-quote">RICHIEDI PREVENTIVO</button>
+    </div>
+  </header>
+
+
+  <!-- =========================================================
+       2. HERO SECTION (Atmospheric Racing Workshop Box)
+       ========================================================= -->
+  <section class="hero-section" id="hero">
+
+    <!-- Hero Background Visual (Sportbike in dark workshop) -->
+    <div class="hero-bg-visual" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=2000&q=85"
+        alt="Sportbike Racing Workshop" class="hero-bg-img" />
+      <div class="hero-overlay-dark"></div>
+      <div class="hero-laser-line"></div>
+    </div>
+
+    <div class="hero-container">
+
+      <!-- Telemetry Status Ribbon -->
+      <div class="hero-telemetry">
+        <span class="telemetry-badge"><span class="pulse-dot"></span> OFFICINA SPECIALIZZATA MOTO</span>
+        <span class="telemetry-coords">[ 45°04'N // RACE PREP ]</span>
+      </div>
+
+      <!-- Eyebrow -->
+      <div class="hero-eyebrow">
+        <span class="eyebrow-accent">// PREPARAZIONI & CARENE MOTO</span>
+      </div>
+
+      <!-- Main Headline (Rajdhani 800 + Orbitron with Red Racing Italic) -->
+      <h1 class="hero-title">
+        ESTETICA DA PISTA.<br />
+        <span class="racing-italic-red">PRECISIONE MILLIMETRICA.</span>
+      </h1>
+
+      <!-- Technical Subtitle -->
+      <p class="hero-subtitle">
+        Verniciatura a forno certificata, ricostruzione strutturale di carene in ABS / fibra composita e livree racing
+        ad altissima definizione per moto stradali e da competizione.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="hero-cta-group">
+        <button type="button" class="btn-racing-primary" id="btn-hero-config">
+          <span class="btn-cut-corner"></span>
+          <span class="btn-text">CONFIGURA LA TUA MOTO</span>
+          <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </button>
+        <a href="#portfolio" class="btn-racing-ghost">
+          <span>VEDI LAVORI SULLA PISTA</span>
+        </a>
+      </div>
+
+      <!-- Technical Specs Badges Bar -->
+      <div class="hero-specs-bar">
+        <div class="spec-pill">
+          <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E11D48"
+            stroke-width="2.5">
+            <path d="M20 6L9 17l-5-5" />
+          </svg>
+          <span>Verniciatura a Forno 65°C</span>
+        </div>
+        <div class="spec-pill">
+          <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E11D48"
+            stroke-width="2.5">
+            <path d="M20 6L9 17l-5-5" />
+          </svg>
+          <span>Saldatura & Ripristino ABS</span>
+        </div>
+        <div class="spec-pill">
+          <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E11D48"
+            stroke-width="2.5">
+            <path d="M20 6L9 17l-5-5" />
+          </svg>
+          <span>Livree & Wrap Racing</span>
+        </div>
+        <div class="spec-pill">
+          <svg class="spec-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E11D48"
+            stroke-width="2.5">
+            <path d="M20 6L9 17l-5-5" />
+          </svg>
+          <span>Preventivo Rapido WhatsApp</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Red Laser Section Divider Bottom -->
+    <div class="laser-divider"></div>
+  </section>
+
+
+  <!-- =========================================================
+       3. SEZIONE SERVIZI (6 Slot Racing Telemetria)
+       ========================================================= -->
+  <section class="section-services" id="services">
+    <div class="content-container">
+
+      <!-- Section Title HUD -->
+      <div class="section-heading-hud">
+        <div class="heading-tag">
+          <span class="hud-bracket">[</span> SEZIONE 01 // COMPETENZE OFFICINA <span class="hud-bracket">]</span>
+        </div>
+        <h2 class="section-title">I NOSTRI SERVIZI</h2>
+        <p class="section-desc">Standard da campionato per ogni singolo centimetro quadrato di carena.</p>
+        <div class="red-glow-separator"></div>
+      </div>
+
+      <!-- Services Grid (Popolata dinamicamente da app.js con fallback HTML) -->
+      <div class="services-grid" id="services-grid">
+        <!-- Generato dinamicamente via app.js -->
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       4. SEZIONE PORTFOLIO "PRIMA & DOPO"
+       ========================================================= -->
+  <section class="section-portfolio" id="portfolio">
+    <div class="content-container">
+
+      <!-- Section Title HUD -->
+      <div class="section-heading-hud">
+        <div class="heading-tag">
+          <span class="hud-bracket">[</span> SEZIONE 02 // GALLERY BOX <span class="hud-bracket">]</span>
+        </div>
+        <h2 class="section-title">PRIMA &amp; DOPO</h2>
+        <p class="section-desc">I nostri ultimi interventi in officina. Trascina lo slider per confrontare la carena
+          danneggiata con il risultato finito.</p>
+        <div class="red-glow-separator"></div>
+      </div>
+
+      <!-- Filters Bar -->
+      <div class="portfolio-filter-bar" id="portfolio-filters">
+        <button type="button" class="filter-chip active" data-filter="tutti">TUTTI I LAVORI</button>
+        <button type="button" class="filter-chip" data-filter="verniciatura">VERNICIATURA A FORNO</button>
+        <button type="button" class="filter-chip" data-filter="riparazione">RIPARAZIONE CARENE</button>
+        <button type="button" class="filter-chip" data-filter="livree">LIVREE RACING</button>
+      </div>
+
+      <!-- Portfolio Grid -->
+      <div class="portfolio-grid" id="portfolio-grid">
+        <!-- Card dinamiche generate da app.js -->
+      </div>
+
+      <!-- Slot Aggiungi Lavoro Rapido (Visibile solo se Admin aperto) -->
+      <div class="admin-quick-add hidden" id="admin-portfolio-quick-add">
+        <button type="button" class="btn-add-work-dashed" id="btn-quick-add-work">
+          <span class="plus-icon">+</span>
+          <span class="text-bold">AGGIUNGI NUOVO LAVORO PRIMA &amp; DOPO</span>
+          <span class="subtext">Carica foto Prima/Dopo e pubblica subito nel sito</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       5. FOOTER & CONTATTI OFFICINA
+       ========================================================= -->
+  <footer class="site-footer" id="contacts">
+    <div class="laser-divider"></div>
+    <div class="footer-container">
+
+      <!-- Brand & WhatsApp Quick -->
+      <div class="footer-col brand-col">
+        <img src="logo_transparent.png" alt="ColorBike" class="footer-logo" />
+        <p class="footer-mission">
+          <strong>ColorBike</strong> — Linea Moto di <em>Carrozzeria Gatto</em>.<br />
+          L'eccellenza artigianale unita alle più moderne tecnologie di verniciatura e riparazione compositi per gli
+          appassionati di due ruote più esigenti.
+        </p>
+
+        <a href="https://wa.me/393401234567?text=Ciao%20ColorBike!%20Vorrei%20inviarvi%20le%20foto%20della%20mia%20moto%20per%20un%20preventivo."
+          target="_blank" rel="noopener noreferrer" class="btn-whatsapp-direct">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12.031 2C6.516 2 2.016 6.5 2.016 12.016c0 1.968.563 3.828 1.641 5.422L2 22l4.703-1.609c1.531.938 3.328 1.453 5.328 1.453 5.516 0 10.016-4.5 10.016-10.016S17.547 2 12.031 2zm0 18.281c-1.734 0-3.328-.484-4.703-1.359l-.328-.203-2.813.969.969-2.75-.219-.344C4.016 15.25 3.531 13.688 3.531 12c0-4.688 3.813-8.5 8.5-8.5 4.688 0 8.5 3.813 8.5 8.5s-3.812 8.281-8.5 8.281zm4.656-6.203c-.25-.125-1.5-.75-1.734-.844-.234-.094-.406-.141-.578.141s-.672.844-.828 1.016c-.156.172-.313.203-.563.078-.25-.125-1.063-.391-2.031-1.25-.75-.672-1.266-1.5-1.422-1.75-.156-.25-.016-.391.109-.516.109-.109.25-.281.375-.422.125-.141.172-.234.25-.391.078-.156.047-.313-.016-.438-.078-.125-.578-1.406-.797-1.922-.219-.516-.438-.453-.594-.453h-.516c-.172 0-.453.063-.688.328-.234.266-.906.891-.906 2.172s.938 2.516 1.063 2.688c.125.172 1.844 2.813 4.469 3.953.625.266 1.109.438 1.484.563.625.203 1.203.172 1.656.109.516-.078 1.5-.609 1.719-1.203.219-.594.219-1.109.156-1.219-.063-.109-.234-.172-.484-.297z" />
+          </svg>
+          <span>INVIA FOTO DANNI SU WHATSAPP</span>
+        </a>
+      </div>
+
+      <!-- Officina & Orari -->
+      <div class="footer-col hours-col">
+        <h4 class="footer-col-title">OFFICINA &amp; ORARI</h4>
+        <ul class="hours-list">
+          <li><span>Lunedì - Venerdì:</span> <strong>08:30 - 12:30 | 14:00 - 18:30</strong></li>
+          <li><span>Sabato:</span> <strong>08:30 - 12:30 (su appuntamento)</strong></li>
+          <li><span>Domenica &amp; Festivi:</span> <strong class="text-red">Chiuso per gare</strong></li>
+        </ul>
+        <div class="contact-meta-item">
+          <span class="meta-label">📍 SEDE OPERATIVA:</span>
+          <span class="meta-val">Via della Pista 42, Torino</span>
+        </div>
+        <div class="contact-meta-item">
+          <span class="meta-label">✉ EMAIL TECNICA:</span>
+          <span class="meta-val">info@colorbike.it</span>
+        </div>
+      </div>
+
+      <!-- Quick Message Form -->
+      <div class="footer-col form-col">
+        <h4 class="footer-col-title">CONTATTO RAPIDO</h4>
+        <form class="quick-form" id="quick-contact-form">
+          <input type="text" placeholder="Nome o Pilota" class="quick-input" id="q-name" required />
+          <input type="tel" placeholder="Cellulare / WhatsApp" class="quick-input" id="q-phone" required />
+          <textarea placeholder="Descrivi il danno o l'intervento desiderato..." class="quick-textarea" id="q-message"
+            rows="3" required></textarea>
+          <button type="submit" class="btn-racing-cta w-full">INVIA MESSAGGIO RAPIDO</button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright & Admin Hint -->
+    <div class="footer-bottom">
+      <div class="bottom-inner">
+        <p>© <span id="year-label">2026</span> <strong>ColorBike</strong> • Carrozzeria Gatto — Tutti i diritti
+          riservati.</p>
+        <button type="button" class="admin-discreet-link" id="btn-admin-bottom">
+          ⚙ Accesso Gestione Negozio (PIN 0000)
+        </button>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- =========================================================
+       6. MODALE RICHIESTA PREVENTIVO / CONFIGURAZIONE MOTO
+       ========================================================= -->
+  <div class="modal-backdrop hidden" id="modal-quote" role="dialog" aria-modal="true"
+    aria-labelledby="modal-quote-title">
+    <div class="modal-racing-box">
+      <button type="button" class="modal-close-x" id="btn-close-quote" aria-label="Chiudi Modale">✕</button>
+
+      <div class="modal-header">
+        <span class="modal-tag">[ MODULO PREVENTIVO ONLINE ]</span>
+        <h3 class="modal-title" id="modal-quote-title">CONFIGURA IL TUO INTERVENTO</h3>
+        <p class="modal-subtitle">Compila le specifiche della tua moto. Ti risponderemo con una stima dettagliata o una
+          chiamata tecnica entro poche ore.</p>
+      </div>
+
+      <form class="racing-form" id="quote-form">
+        <div class="form-row two-cols">
+          <div class="form-group">
+            <label for="qf-name">Nome e Cognome *</label>
+            <input type="text" id="qf-name" class="rf-input" placeholder="Es. Marco Rossi" required />
+          </div>
+          <div class="form-group">
+            <label for="qf-phone">Recapito Telefonico *</label>
+            <input type="tel" id="qf-phone" class="rf-input" placeholder="Es. 340 1234567" required />
+          </div>
+        </div>
+
+        <div class="form-row two-cols">
+          <div class="form-group">
+            <label for="qf-bike">Modello &amp; Anno Moto *</label>
+            <input type="text" id="qf-bike" class="rf-input" placeholder="Es. Ducati Panigale V4 (2023)" required />
+          </div>
+          <div class="form-group">
+            <label for="qf-service">Tipo di Intervento *</label>
+            <select id="qf-service" class="rf-select" required>
+              <option value="verniciatura">Verniciatura a Forno (Completa o Singoli Pezzi)</option>
+              <option value="riparazione">Riparazione Carene rotte / crepate (ABS/Vetroresina)</option>
+              <option value="livrea">Livrea Racing Personalizzata / Replica</option>
+              <option value="restauro">Restauro Totale Moto d'Epoca / Stradale</option>
+              <option value="altro">Altro / Consiglio Tecnico</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="qf-details">Dettagli Intervento / Codice Colore o Note</label>
+          <textarea id="qf-details" class="rf-textarea" rows="4"
+            placeholder="Indica eventuali pezzi danneggiati, colori preferiti o se hai già foto da inviarci..."></textarea>
+        </div>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn-racing-primary w-full">
+            <span class="btn-text">INVIA RICHIESTA PREVENTIVO</span>
+          </button>
+          <button type="button" class="btn-whatsapp-outline w-full" id="btn-quote-wa">
+            <span>PREFERISCI WHATSAPP? APRI CHAT CON FOTO</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- =========================================================
+       7. PANNELLO ADMIN / NO-CODE CMS DI GESTIONE
+       ========================================================= -->
+  <div class="admin-panel-overlay hidden" id="admin-panel" role="dialog" aria-modal="true"
+    aria-labelledby="admin-panel-title">
+    <div class="admin-container">
+
+      <!-- Top Bar Admin -->
+      <div class="admin-topbar">
+        <div class="admin-top-brand">
+          <span class="admin-icon-gear">⚙</span>
+          <div>
+            <h3 class="admin-title" id="admin-panel-title">PANNELLO GESTIONE &amp; SVILUPPO</h3>
+            <span class="admin-badge-mode" id="admin-session-badge">AUTENTICAZIONE RICHIESTA</span>
+          </div>
+        </div>
+        <button type="button" class="btn-close-admin" id="btn-close-admin" aria-label="Chiudi Pannello">✕</button>
+      </div>
+
+      <!-- FASE A: SCHERMATA INSERIMENTO PIN -->
+      <div class="admin-pin-view" id="admin-pin-view">
+        <div class="pin-card">
+          <div class="pin-icon-lock">🔒</div>
+          <h4>ACCESSO AMMINISTRATORE</h4>
+          <p>Inserisci il PIN di sicurezza dell'officina per gestire servizi e lavori (PIN Default: <code>0000</code>):
+          </p>
+
+          <div class="pin-inputs-row" id="pin-inputs-row">
+            <input type="password" inputmode="numeric" maxlength="1" class="pin-digit" data-idx="0" autofocus />
+            <input type="password" inputmode="numeric" maxlength="1" class="pin-digit" data-idx="1" />
+            <input type="password" inputmode="numeric" maxlength="1" class="pin-digit" data-idx="2" />
+            <input type="password" inputmode="numeric" maxlength="1" class="pin-digit" data-idx="3" />
+          </div>
+
+          <div class="pin-error-msg hidden" id="pin-error-msg">PIN non corretto. Riprova.</div>
+
+          <button type="button" class="btn-racing-primary w-full mt-4" id="btn-pin-submit">SBLOCCA PANNELLO</button>
+        </div>
+      </div>
+
+      <!-- FASE B: DASHBOARD GESTIONE (Attiva dopo PIN) -->
+      <div class="admin-dashboard-view hidden" id="admin-dashboard-view">
+
+        <!-- Tab Navigation -->
+        <div class="admin-tabs-nav">
+          <button type="button" class="admin-tab-btn active" data-tab="tab-services">
+            🛠 GESTIONE SERVIZI &amp; SLOT (6)
+          </button>
+          <button type="button" class="admin-tab-btn" data-tab="tab-portfolio">
+            📸 CARICA LAVORI PRIMA &amp; DOPO
+          </button>
+          <button type="button" class="admin-tab-btn" data-tab="tab-export">
+            💾 ESPORTA / IMPORTA CONFIG (`data.json`)
+          </button>
+        </div>
+
+        <!-- TAB 1: GESTIONE SERVIZI -->
+        <div class="admin-tab-content active" id="tab-services">
+          <div class="tab-header-box">
+            <h4>GESTISCI I 6 SLOT DEI SERVIZI</h4>
+            <p>Seleziona uno degli slot sottostanti per modificarne il titolo, la descrizione, le caratteristiche o per
+              trasformarlo da <em>Slot Vuoto / In Arrivo</em> a <em>Servizio Attivo</em>.</p>
+          </div>
+
+          <div class="admin-services-list" id="admin-services-list">
+            <!-- Popolata dinamicamente con i 6 slot -->
+          </div>
+
+          <!-- Modale di Modifica Singolo Servizio -->
+          <div class="service-editor-box hidden" id="service-editor-box">
+            <h5 id="editor-service-title">MODIFICA SLOT #1</h5>
+            <form id="form-service-edit">
+              <input type="hidden" id="edit-service-id" />
+              <div class="form-row two-cols">
+                <div class="form-group">
+                  <label for="edit-service-status">Stato dello Slot</label>
+                  <select id="edit-service-status" class="rf-select">
+                    <option value="active">ATTIVO (Visibile come Servizio Completo)</option>
+                    <option value="empty">VUOTO (Slot Tratteggiato "Servizio In Arrivo")</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="edit-service-icon">Icona Tecnica</label>
+                  <select id="edit-service-icon" class="rf-select">
+                    <option value="spray">Verniciatura / Aerografo</option>
+                    <option value="shield">Riparazione / Scudo ABS</option>
+                    <option value="flag">Livrea Racing / Bandiera Scacchi</option>
+                    <option value="wrench">Officina Meccanica / Chiave</option>
+                    <option value="bolt">Elettrico / Potenza</option>
+                    <option value="plus">Slot Disponibile (+)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="edit-service-name">Titolo del Servizio</label>
+                <input type="text" id="edit-service-name" class="rf-input" required />
+              </div>
+
+              <div class="form-group">
+                <label for="edit-service-desc">Descrizione Dettagliata</label>
+                <textarea id="edit-service-desc" class="rf-textarea" rows="3" required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="edit-service-tags">Badge / Punti Chiave (separati da virgola)</label>
+                <input type="text" id="edit-service-tags" class="rf-input"
+                  placeholder="Es. Verniciatura Lucida, Garanzia 2 Anni, Carene ABS" />
+              </div>
+
+              <div class="editor-buttons">
+                <button type="submit" class="btn-racing-primary">SALVA MODIFICHE SLOT</button>
+                <button type="button" class="btn-racing-ghost" id="btn-cancel-service-edit">ANNULLA</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- TAB 2: CARICA LAVORI PRIMA & DOPO -->
+        <div class="admin-tab-content" id="tab-portfolio">
+          <div class="tab-header-box">
+            <h4>PUBBLICA UN NUOVO LAVORO NEL PORTFOLIO</h4>
+            <p>Seleziona le foto dal tuo computer o incolla URL diretti. Lo slider interattivo Prima &amp; Dopo verrà
+              generato istantaneamente sul sito.</p>
+          </div>
+
+          <form class="racing-form" id="form-add-portfolio">
+            <div class="form-row two-cols">
+              <div class="form-group">
+                <label for="work-title">Titolo Lavoro / Intervento *</label>
+                <input type="text" id="work-title" class="rf-input"
+                  placeholder="Es. Restauro Carena Laterale & Verniciatura" required />
+              </div>
+              <div class="form-group">
+                <label for="work-model">Modello Moto *</label>
+                <input type="text" id="work-model" class="rf-input" placeholder="Es. Ducati Streetfighter V4"
+                  required />
+              </div>
+            </div>
+
+            <div class="form-row two-cols">
+              <div class="form-group">
+                <label for="work-category">Categoria Lavoro *</label>
+                <select id="work-category" class="rf-select" required>
+                  <option value="verniciatura">Verniciatura a Forno</option>
+                  <option value="riparazione">Riparazione Carene ABS/Fibra</option>
+                  <option value="livree">Livrea Racing Personalizzata</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="work-date">Data Completamento</label>
+                <input type="date" id="work-date" class="rf-input" />
+              </div>
+            </div>
+
+            <!-- Upload Box Before & After -->
+            <div class="upload-dual-grid">
+
+              <!-- Foto PRIMA -->
+              <div class="upload-card">
+                <div class="upload-badge before-badge">1. FOTO PRIMA (Danno / Grezza)</div>
+                <div class="preview-box" id="preview-box-before">
+                  <span class="preview-placeholder">Nessuna foto selezionata</span>
+                  <img id="img-preview-before" class="preview-img hidden" alt="Anteprima Prima" />
+                </div>
+                <div class="upload-controls">
+                  <label class="btn-file-upload">
+                    <span>SELEZIONA DA PC</span>
+                    <input type="file" id="file-before" accept="image/*" class="hidden" />
+                  </label>
+                  <input type="url" id="url-before" class="rf-input url-input"
+                    placeholder="o incolla URL immagine..." />
+                </div>
+              </div>
+
+              <!-- Foto DOPO -->
+              <div class="upload-card">
+                <div class="upload-badge after-badge">2. FOTO DOPO (Finito / Verniciato)</div>
+                <div class="preview-box" id="preview-box-after">
+                  <span class="preview-placeholder">Nessuna foto selezionata</span>
+                  <img id="img-preview-after" class="preview-img hidden" alt="Anteprima Dopo" />
+                </div>
+                <div class="upload-controls">
+                  <label class="btn-file-upload">
+                    <span>SELEZIONA DA PC</span>
+                    <input type="file" id="file-after" accept="image/*" class="hidden" />
+                  </label>
+                  <input type="url" id="url-after" class="rf-input url-input" placeholder="o incolla URL immagine..." />
+                </div>
+              </div>
+
+            </div>
+
+            <div class="form-group mt-3">
+              <label for="work-notes">Note Tecniche Intervento</label>
+              <textarea id="work-notes" class="rf-textarea" rows="3"
+                placeholder="Descrivi il procedimento (es. saldatura plastica, stuccatura, ciclo a forno, tipo vernice)..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-racing-primary w-full mt-3">
+              <span class="btn-text">PUBBLICA LAVORO NELLA GALLERY</span>
+            </button>
+          </form>
+
+          <!-- Lista Lavori Esistenti da Eliminare se necessario -->
+          <div class="existing-works-mgmt mt-5">
+            <h5>LAVORI ATTUALMENTE PUBBLICATI</h5>
+            <div class="works-mgmt-list" id="works-mgmt-list">
+              <!-- Popolato dinamicamente da app.js -->
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 3: ESPORTA / IMPORTA CONFIG -->
+        <div class="admin-tab-content" id="tab-export">
+          <div class="tab-header-box">
+            <h4>PERSISTENZA DEI DATI E DISTRIBUZIONE</h4>
+            <p>Tutte le modifiche che fai vengono salvate automaticamente nella memoria del tuo browser
+              (<code>localStorage</code>). Quando hai ultimato i servizi e i lavori, <strong>scarica il file
+                <code>data.json</code></strong> e sostituiscilo nella cartella del sito prima di caricarlo su Aruba o
+              GitHub Pages.</p>
+          </div>
+
+          <div class="export-actions-grid">
+
+            <div class="export-card">
+              <div class="export-icon">📥</div>
+              <h5>ESPORTA CONFIGURAZIONE</h5>
+              <p>Scarica il file <code>data.json</code> aggiornato con tutti i tuoi nuovi servizi, testi e foto dei
+                lavori.</p>
+              <button type="button" class="btn-racing-primary w-full" id="btn-export-json">
+                SCARICA DATA.JSON DEFINITIVO
+              </button>
+            </div>
+
+            <div class="export-card">
+              <div class="export-icon">📤</div>
+              <h5>IMPORTA CONFIGURAZIONE</h5>
+              <p>Carica un file <code>data.json</code> per ripristinare o sincronizzare i contenuti tra dispositivi
+                diversi.</p>
+              <label class="btn-racing-ghost w-full block text-center cursor-pointer">
+                <span>CARICA DATA.JSON</span>
+                <input type="file" id="input-import-json" accept=".json" class="hidden" />
+              </label>
+            </div>
+
+          </div>
+
+          <div class="security-box mt-4">
+            <h5>CAMBIA PIN DI ACCESSO</h5>
+            <div class="pin-change-row">
+              <input type="password" id="input-new-pin" maxlength="6" placeholder="Nuovo PIN (4-6 cifre)"
+                class="rf-input w-auto" />
+              <button type="button" class="btn-racing-ghost" id="btn-save-new-pin">AGGIORNA PIN</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Toast Feedback Notifier -->
+  <div class="toast-notifier hidden" id="toast-notifier">
+    <div class="toast-content" id="toast-text">Modifiche salvate con successo!</div>
+  </div>
+
+  <!-- SCRIPT PRINCIPALE -->
+  <script src="app.js"></script>
+</body>
+
+</html>

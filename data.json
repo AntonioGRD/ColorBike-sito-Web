@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "brand": "ColorBike",
+    "subBrand": "Carrozzeria Gatto • Linea Moto",
+    "whatsapp": "+393401234567",
+    "phone": "+39 011 9876543",
+    "email": "info@colorbike.it",
+    "address": "Via della Pista 42, Torino (TO)",
+    "hours": {
+      "weekdays": "Lun - Ven: 08:30 - 12:30 | 14:00 - 18:30",
+      "saturday": "Sabato: 08:30 - 12:30 (su appuntamento)",
+      "sunday": "Domenica: Chiuso"
+    },
+    "version": "2.0.0"
+  },
+  "services": [
+    {
+      "id": 1,
+      "status": "active",
+      "icon": "spray",
+      "title": "Verniciatura a Forno",
+      "subtitle": "Ciclo termico certificato",
+      "description": "Verniciatura professionale in cabina a pressione positiva con essiccazione a forno a 65°C. Massima brillantezza, adesione totale su supporti plastici e resistenza UV estrema.",
+      "tags": ["Finitura Lucida / Opaca", "Colori Originali & Candy", "Trattamento Ceramico"]
+    },
+    {
+      "id": 2,
+      "status": "active",
+      "icon": "shield",
+      "title": "Riparazione Carene ABS & Fibra",
+      "subtitle": "Ripristino strutturale millimetrico",
+      "description": "Saldatura molecolare a filo caldo per plastiche OEM (ABS/PA) e ricostruzione composita in fibra di vetro e carbonio. Recupero geometrie e punti di ancoraggio originali.",
+      "tags": ["Saldatura ABS", "Vetroresina & Carbonio", "Dime di Controllo"]
+    },
+    {
+      "id": 3,
+      "status": "active",
+      "icon": "flag",
+      "title": "Livree Racing & Replica MotoGP",
+      "subtitle": "Progettazione grafica da competizione",
+      "description": "Progettazione grafica su misura e applicazione grafiche sotto trasparente o wrapping cast ad alta conformabilità. Dalla replica SBK alle creazioni pista uniche al mondo.",
+      "tags": ["Repliche SBK & MotoGP", "Grafiche Sotto Trasparente", "Tabelle Portanumero"]
+    },
+    {
+      "id": 4,
+      "status": "empty",
+      "icon": "plus",
+      "title": "Slot Disponibile",
+      "subtitle": "Nuovo servizio in arrivo",
+      "description": "Questo slot è libero per un nuovo servizio dell'officina. Personalizzalo in qualsiasi momento aprendo il Pannello Gestione (Ctrl+Shift+A).",
+      "tags": ["Configurabile da Admin"]
+    },
+    {
+      "id": 5,
+      "status": "empty",
+      "icon": "plus",
+      "title": "Slot Disponibile",
+      "subtitle": "Nuovo servizio in arrivo",
+      "description": "Questo slot è libero per un nuovo servizio dell'officina. Personalizzalo in qualsiasi momento aprendo il Pannello Gestione (Ctrl+Shift+A).",
+      "tags": ["Configurabile da Admin"]
+    },
+    {
+      "id": 6,
+      "status": "empty",
+      "icon": "plus",
+      "title": "Slot Disponibile",
+      "subtitle": "Nuovo servizio in arrivo",
+      "description": "Questo slot è libero per un nuovo servizio dell'officina. Personalizzalo in qualsiasi momento aprendo il Pannello Gestione (Ctrl+Shift+A).",
+      "tags": ["Configurabile da Admin"]
+    }
+  ],
+  "portfolio": [
+    {
+      "id": 1001,
+      "title": "Ducati Panigale V4 S — Ripristino Pista & Verniciatura",
+      "model": "Ducati Panigale V4 S",
+      "category": "verniciatura",
+      "date": "2026-10-24",
+      "notes": "Carena laterale destra e codino lesionati post-scivolata al Mugello. Saldatura plastica ABS, ricostruzione staffe interne, stuccatura poliestere e riverniciatura in Rosso Corsa Ducati originale a triplo strato trasparente lucido.",
+      "beforeImg": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1200&q=80",
+      "afterImg": "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "id": 1002,
+      "title": "Yamaha YZF-R1 — Livrea Custom Monster Racing Edition",
+      "model": "Yamaha YZF-R1M",
+      "category": "livree",
+      "date": "2026-09-18",
+      "notes": "Trasformazione da colorazione stradale stock a livrea racing completa satinata nero profondo con dettagli verde fluo, loghi tecnici aerografati e doppia mano di trasparente opaco ad alta resistenza chimica.",
+      "beforeImg": "https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?auto=format&fit=crop&w=1200&q=80",
+      "afterImg": "https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "id": 1003,
+      "title": "BMW S1000RR — Ricostruzione Carena Anteriore & Cupolino",
+      "model": "BMW S1000RR M-Package",
+      "category": "riparazione",
+      "date": "2026-08-30",
+      "notes": "Riparazione complessa musetto e condotto airbox in fibra composita con rottura multipla. Ripristino accoppiamenti fari a tolleranza zero e finitura Motorsport Tricolore BMW.",
+      "beforeImg": "https://images.unsplash.com/photo-1615172282427-9a57ef2d142e?auto=format&fit=crop&w=1200&q=80",
+      "afterImg": "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1200&q=80"
+    }
+  ],
+  "adminPin": "0000"
+}
