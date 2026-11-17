@@ -27,7 +27,11 @@
       "title": "Verniciatura Moto e Scooter",
       "subtitle": "Ciclo termico a forno a 65°C",
       "description": "Verniciatura professionale a forno per qualsiasi moto stradale, maxiscooter e scooter. Ripristino tinte originali OEM a campione o a codice, finitura lucida a specchio o opaco profondo con trasparente antigraffio e massima protezione UV.",
-      "tags": ["Tinte Originali OEM", "Moto & Scooter", "Trasparente Antigraffio"]
+      "tags": [
+        "Tinte Originali OEM",
+        "Moto & Scooter",
+        "Trasparente Antigraffio"
+      ]
     },
     {
       "id": 2,
@@ -36,7 +40,11 @@
       "title": "Grafiche Personalizzate",
       "subtitle": "Livree su misura e decalcomanie protette",
       "description": "Progettazione, intaglio e applicazione di livree su misura, loghi, tabelle porta numero, grafiche sportive e stradali. Sigillatura sotto trasparente per eliminare ogni scalino e garantire brillantezza e durata.",
-      "tags": ["Livree su Misura", "Loghi Sotto Trasparente", "Wrapping & Decal"]
+      "tags": [
+        "Livree su Misura",
+        "Loghi Sotto Trasparente",
+        "Wrapping & Decal"
+      ]
     },
     {
       "id": 3,
@@ -54,7 +62,11 @@
       "title": "Personalizzazione Totale Moto",
       "subtitle": "Restyling estetico completo a 360°",
       "description": "Progetto completo di customizzazione estetica: restyling totale di moto stradali e maxiscooter. Combinazione esclusiva di verniciatura integrale con tinte speciali (metallizzate, perlate o opache), dettagli a contrasto e cerchi coordinati.",
-      "tags": ["Restyling 360°", "Cambi Colore Integrali", "Custom Stradali Uniche"]
+      "tags": [
+        "Restyling 360°",
+        "Cambi Colore Integrali",
+        "Custom Stradali Uniche"
+      ]
     },
     {
       "id": 5,
@@ -63,7 +75,11 @@
       "title": "Verniciatura Caschi",
       "subtitle": "Personalizzazione caschi moto & scooter",
       "description": "Verniciatura professionale e personalizzazione grafica per caschi integrali, modulari e jet. Ripristino colore, livree replica racing, aerografie, loghi, nomi e numeri pilota con vernici di alta gamma e trasparente ceramico ad altissima resistenza.",
-      "tags": ["Caschi Integrali & Jet", "Livree Pilota Replica", "Trasparente Ultra-Resistente"]
+      "tags": [
+        "Caschi Integrali & Jet",
+        "Livree Pilota Replica",
+        "Trasparente Ultra-Resistente"
+      ]
     },
     {
       "id": 6,
@@ -72,7 +88,11 @@
       "title": "Riparazione in caso di Incidenti",
       "subtitle": "Ripristino carene, saldatura plastiche & serbatoi",
       "description": "Gestione e ripristino completo del danno da incidente, caduta o scivolata: saldatura plastica molecolare per carene OEM in ABS, ricostruzione staffe e ganci rotti, raddrizzatura e stuccatura serbatoi, recupero o sostituzione pezzi danneggiati.",
-      "tags": ["Saldatura Plastica ABS", "Ricostruzione Staffe", "Danni da Incidente"]
+      "tags": [
+        "Saldatura Plastica ABS",
+        "Ricostruzione Staffe",
+        "Danni da Incidente"
+      ]
     }
   ],
   "portfolio": [

@@ -365,7 +365,7 @@ function setupQuoteModal() {
 
       const message = `Richiesta Preventivo ColorBike:\nNome: ${name}\nTel: ${phone}\nMoto: ${bike}\nIntervento: ${serviceText}\nDettagli: ${details}`;
       const waUrl = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
-      
+
       showToast('Richiesta inviata! Reindirizzamento a WhatsApp...');
       setTimeout(() => {
         window.open(waUrl, '_blank');
@@ -493,7 +493,7 @@ function setupAdminPanel() {
       dashView.classList.remove('hidden');
       sessionBadge.textContent = 'SESSIONE AMMINISTRATORE ATTIVA';
       sessionBadge.style.color = '#22c55e';
-      
+
       // Mostra pulsante aggiungi lavoro rapido nella pagina
       const quickAdd = document.getElementById('admin-portfolio-quick-add');
       if (quickAdd) quickAdd.classList.remove('hidden');
@@ -618,7 +618,7 @@ function setupServiceEditor() {
       target.icon = document.getElementById('edit-service-icon').value;
       target.title = document.getElementById('edit-service-name').value.trim();
       target.description = document.getElementById('edit-service-desc').value.trim();
-      
+
       const rawTags = document.getElementById('edit-service-tags').value;
       target.tags = rawTags.split(',').map(t => t.trim()).filter(Boolean);
 
