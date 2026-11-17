@@ -27,10 +27,10 @@ Web Application ad alte prestazioni sviluppata per **ColorBike by CARROZZERIA di
   5. Verniciatura Caschi (Integrali, jet e modulari, grafiche replica)
   6. Riparazione in caso di Incidenti (Saldatura ABS, raddrizzatura serbatoi)
 
-- **Gallery "I Nostri Lavori" con Slider Prima/Dopo Condizionale**:
+- **Gallery "I Nostri Lavori" Unificata con Slider Prima/Dopo Condizionale**:
+  - Mostra tutti i progetti dell'officina in un'unica galleria coordinata ad alto impatto.
   - Per i lavori con foto prima e dopo (riparazione incidenti o restauro carene), slider interattivo con laser divider centrale trascinabile.
   - Per i lavori artistici o grafiche custom, elegante visualizzazione fotografica singola in alta definizione con badge "LAVORO ESEGUITO".
-  - Filtri per categoria (*Tutti i Lavori*, *Verniciatura*, *Grafiche Personalizzate*, *Aerografo*, *Personalizzazione Totale*, *Verniciatura Caschi*, *Riparazione Incidenti*).
 
 - **Social & Contatti Ufficiali**:
   - Icone social minimali collegate a Instagram (`@color.bike`), TikTok (`@colorbike`) e Facebook (`Colorbike`).
