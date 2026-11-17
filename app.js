@@ -9,7 +9,7 @@
 // 1. CONFIGURATION & STATE
 // =============================================================================
 const CONFIG = {
-  storageKey: 'colorbike_store_v10',
+  storageKey: 'colorbike_store_v11',
   pinStorageKey: 'colorbike_admin_pin',
   defaultPin: '0000',
   whatsappNumber: '393384544717'
@@ -147,7 +147,7 @@ function renderPortfolioSubnav() {
     { id: 'scooter', label: 'Scooter & Maxiscooter' },
     { id: 'custom-harley', label: 'Custom & Harley' },
     { id: 'aerografo-cubicatura', label: 'Aerografo & Cubicatura' },
-    { id: 'serbatoi-classic', label: 'Serbatoi & Classic' }
+    { id: 'serbatoi', label: 'Serbatoi' }
   ];
 
   navContainer.innerHTML = '';

@@ -122,16 +122,36 @@
     },
     {
       "id": 1003,
+      "title": "Yamaha YZF-R1 — Special Edition Giallo Fluo & Akrapovic Carbon",
+      "model": "Yamaha YZF-R1",
+      "category": "moto-stradali",
+      "date": "2026-11-09",
+      "notes": "Progetto completo di verniciatura carene, cupolino e serbatoio in Giallo Fluo brillante multistrato ad alta visibilità con dettagli nero lucido, angel eyes e finitura protettiva antigraffio.",
+      "beforeImg": "",
+      "afterImg": "img/portfolio/yamaha_r1_full.jpg"
+    },
+    {
+      "id": 1004,
+      "title": "Harley-Davidson Touring — Cambio Colore da Bianco a Nero",
+      "model": "Harley-Davidson Street Glide / Bagger",
+      "category": "custom-harley",
+      "date": "2026-10-15",
+      "notes": "Trasformazione radicale con cambio colore integrale: carrozzeria originale Bianco Perlato riverniciata completamente a forno in Nero Profondo Lucido con finitura a specchio su cupolino batwing, serbatoio e borse rigide laterali.",
+      "beforeImg": "img/portfolio/harley_white.jpg",
+      "afterImg": "img/portfolio/harley_black.jpg"
+    },
+    {
+      "id": 1005,
       "title": "Ducati Monster — Cubicatura Idrostampa su Serbatoio",
       "model": "Ducati Monster",
       "category": "aerografo-cubicatura",
       "date": "2026-11-06",
-      "notes": "Verniciatura serbatoio in Rosso Corsa con fascia centrale in cubicatura water transfer printing (texture ingranaggi / carbon look) protetta con trasparente 2K antigraffio.",
+      "notes": "Verniciatura serbatoio in Rosso Corsa con fascia centrale in cubicatura water transfer printing (texture tecnica ingranaggi / carbon look) protetta con trasparente 2K antigraffio.",
       "beforeImg": "",
       "afterImg": "img/portfolio/ducati_monster_cubicatura.jpg"
     },
     {
-      "id": 1004,
+      "id": 1006,
       "title": "Honda Africa Twin — Verde Smeraldo Perlato & Aerografia",
       "model": "Honda CRF1100L Africa Twin",
       "category": "aerografo-cubicatura",
@@ -141,7 +161,7 @@
       "afterImg": "img/portfolio/africa_twin_aerografo.jpg"
     },
     {
-      "id": 1005,
+      "id": 1007,
       "title": "Piaggio Runner — Restyling Grigio Nardo & Nero Lucido",
       "model": "Piaggio / Gilera Runner",
       "category": "scooter",
@@ -151,7 +171,7 @@
       "afterImg": "img/portfolio/piaggio_runner_nardo.jpg"
     },
     {
-      "id": 1006,
+      "id": 1008,
       "title": "Honda SH — Verniciatura Personalizzata Giallo Corsa & Nero",
       "model": "Honda SH 150 / 300",
       "category": "scooter",
@@ -161,7 +181,7 @@
       "afterImg": "img/portfolio/honda_sh_yellow.jpg"
     },
     {
-      "id": 1007,
+      "id": 1009,
       "title": "Harley-Davidson — Verniciatura Parafango & Filettatura Artigianale",
       "model": "Harley-Davidson Custom",
       "category": "custom-harley",
@@ -171,47 +191,7 @@
       "afterImg": "img/portfolio/harley_blue_pinstripe.jpg"
     },
     {
-      "id": 1008,
-      "title": "Harley-Davidson — Cambio Colore Integrale Carrozzeria",
-      "model": "Harley-Davidson Sportster / Dyna",
-      "category": "custom-harley",
-      "date": "2026-09-29",
-      "notes": "Cambio colore completo per serbatoio e parafanghi con rimozione vernice originale, stuccatura di precisione, fondo anticorrosivo e finitura a forno con vernici di alta gamma.",
-      "beforeImg": "",
-      "afterImg": "img/portfolio/harley_cambio_colore.jpg"
-    },
-    {
-      "id": 1009,
-      "title": "Honda CB Four d'Epoca — Oro Metallizzato con Filetti",
-      "model": "Honda CB 500 / 750 Four Classic",
-      "category": "serbatoi-classic",
-      "date": "2026-10-08",
-      "notes": "Restauro conservativo e riverniciatura serbatoio storico in Oro Metallizzato Candy originale Honda con guance nero lucido e doppio filetto bianco di separazione.",
-      "beforeImg": "",
-      "afterImg": "img/portfolio/honda_four_gold.jpg"
-    },
-    {
       "id": 1010,
-      "title": "BMW K100 — Verniciatura Serbatoio & Ripristino Grafica Storica",
-      "model": "BMW K100 / R Series",
-      "category": "serbatoi-classic",
-      "date": "2026-09-15",
-      "notes": "Riparazione ammaccature, trattamento interno ed esterno del serbatoio, verniciatura fedele al codice storico BMW con ripristino delle filettature bicolore sotto trasparente.",
-      "beforeImg": "",
-      "afterImg": "img/portfolio/bmw_k100_tank.jpg"
-    },
-    {
-      "id": 1011,
-      "title": "Yamaha YZF-R1 — Serbatoio Giallo Fluo & Dettagli Nero",
-      "model": "Yamaha YZF-R1",
-      "category": "moto-stradali",
-      "date": "2026-11-09",
-      "notes": "Verniciatura ad alta visibilità in Giallo Fluo brillante multistrato con logo diapason Yamaha aerografato in nero lucido sotto trasparente antigraffio.",
-      "beforeImg": "",
-      "afterImg": "img/portfolio/yamaha_r1_fluo.jpg"
-    },
-    {
-      "id": 1012,
       "title": "Yamaha MT-01 — Personalizzazione Deep Grey & Black",
       "model": "Yamaha MT-01",
       "category": "moto-stradali",
@@ -221,7 +201,7 @@
       "afterImg": "img/portfolio/yamaha_mt01_custom.jpg"
     },
     {
-      "id": 1013,
+      "id": 1011,
       "title": "Buell XB — Verniciatura Carene & Telaio",
       "model": "Buell XB12 / XB9",
       "category": "moto-stradali",
@@ -231,7 +211,7 @@
       "afterImg": "img/portfolio/buell_xb_custom.jpg"
     },
     {
-      "id": 1014,
+      "id": 1012,
       "title": "Triumph Speed Triple — Verniciatura Integrale Special",
       "model": "Triumph Speed Triple",
       "category": "moto-stradali",
@@ -241,7 +221,7 @@
       "afterImg": "img/portfolio/triumph_speed_custom.jpg"
     },
     {
-      "id": 1015,
+      "id": 1013,
       "title": "Kawasaki Ninja — Verniciatura Carene & Puntale",
       "model": "Kawasaki Ninja",
       "category": "moto-stradali",
@@ -251,12 +231,92 @@
       "afterImg": "img/portfolio/kawasaki_custom.jpg"
     },
     {
+      "id": 1014,
+      "title": "Honda CB Four d'Epoca — Serbatoio Oro Candy & Filetti Bianchi",
+      "model": "Honda CB 500 / 750 Four Classic",
+      "category": "serbatoi",
+      "date": "2026-10-08",
+      "notes": "Restauro conservativo e riverniciatura serbatoio storico in Oro Metallizzato Candy originale Honda con guance nero lucido e doppio filetto bianco di separazione.",
+      "beforeImg": "",
+      "afterImg": "img/portfolio/honda_four_gold.jpg"
+    },
+    {
+      "id": 1015,
+      "title": "Ducati — Serbatoio Bicolore Rosso Corsa & Alluminio Spazzolato",
+      "model": "Ducati Monster / Streetfighter",
+      "category": "serbatoi",
+      "date": "2026-11-01",
+      "notes": "Lavorazione bicolore artigianale: accostamento tra Rosso Corsa originale e inserto centrale in alluminio spazzolato con logo Ducati nero sigillato sotto trasparente 2K a specchio.",
+      "beforeImg": "",
+      "afterImg": "img/portfolio/tank_ducati_bicolore.jpg"
+    },
+    {
       "id": 1016,
-      "title": "Kawasaki Vintage — Serbatoio Bicolore con Filetti",
+      "title": "Triumph Classic — Bicolore Nero Lucido, Avorio & Filettatura Oro",
+      "model": "Triumph Bonneville / Scrambler",
+      "category": "serbatoi",
+      "date": "2026-10-25",
+      "notes": "Eleganza britannica senza tempo: livrea bicolore sagomata a cuore Nero Lucido e Bianco Avorio con filettatura oro artigianale perimetrale eseguita a mano.",
+      "beforeImg": "",
+      "afterImg": "img/portfolio/tank_triumph_classic.jpg"
+    },
+    {
+      "id": 1017,
+      "title": "Triumph Thruxton — Sfumatura Black Cherry & Bordeaux Perlato",
+      "model": "Triumph Thruxton / Speed Twin",
+      "category": "serbatoi",
+      "date": "2026-10-11",
+      "notes": "Verniciatura sfumata dark: transizione da nero profondo a bordeaux scuro metallizzato con particelle perlate che si accendono alla luce del sole.",
+      "beforeImg": "",
+      "afterImg": "img/portfolio/tank_triumph_cherry.jpg"
+    },
+    {
+      "id": 1018,
+      "title": "Honda Classic — Rosso Rubino Perlato Candy & Ali Storiche",
+      "model": "Honda CB Classic",
+      "category": "serbatoi",
+      "date": "2026-09-28",
+      "notes": "Verniciatura tristrato Candy Red con fondo metallico argento brillante e trasparente colorato per la massima profondità cromatica, completata con ali storiche Honda.",
+      "beforeImg": "",
+      "afterImg": "img/portfolio/tank_honda_candy_red.jpg"
+    },
+    {
+      "id": 1019,
+      "title": "Honda Africa Twin — Livrea HRC Rally Dakar con Profilo Montagna",
+      "model": "Honda Africa Twin 750 / 1000",
+      "category": "serbatoi",
+      "date": "2026-09-18",
+      "notes": "Grafica racing replica Dakar: scomposizione geometrica a tre colori HRC (Blu Elettrico, Bianco Ghiaccio e Rosso Corsa) con profilo alpino ad alta precisione.",
+      "beforeImg": "",
+      "afterImg": "img/portfolio/tank_africa_twin_rally.jpg"
+    },
+    {
+      "id": 1020,
+      "title": "BMW K100 — Ripristino Grafica Storica Bicolore",
+      "model": "BMW K100 / R Series",
+      "category": "serbatoi",
+      "date": "2026-09-15",
+      "notes": "Riparazione ammaccature, trattamento anticorrosivo interno ed esterno, verniciatura fedele al codice storico BMW con ripristino delle filettature bicolore sotto trasparente.",
+      "beforeImg": "",
+      "afterImg": "img/portfolio/bmw_k100_tank.jpg"
+    },
+    {
+      "id": 1021,
+      "title": "BMW K100 Cafe Racer — Finitura Bicolore Special & Loghi",
+      "model": "BMW K100 Cafe Racer Special",
+      "category": "serbatoi",
+      "date": "2026-09-08",
+      "notes": "Customizzazione per progetto cafe racer: linea bicolore dinamica che segue le spigolature caratteristiche del serbatoio a sogliola BMW, trasparente antigraffio.",
+      "beforeImg": "",
+      "afterImg": "img/portfolio/tank_bmw_k100_caferacer.jpg"
+    },
+    {
+      "id": 1022,
+      "title": "Kawasaki Vintage — Serbatoio Bicolore Special con Filetti",
       "model": "Kawasaki Z / Classic",
-      "category": "serbatoi-classic",
-      "date": "2026-09-05",
-      "notes": "Stuccatura serbatoio, raddrizzatura botte da caduta e verniciatura bicolore con trasparente UHS ad alto spessore.",
+      "category": "serbatoi",
+      "date": "2026-09-02",
+      "notes": "Stuccatura serbatoio, raddrizzatura botte da caduta e verniciatura bicolore con trasparente UHS ad alto spessore e lucidatura a mano.",
       "beforeImg": "",
       "afterImg": "img/portfolio/kawasaki_tank_special.jpg"
     }
@@ -284,8 +344,8 @@
       "label": "Aerografo & Cubicatura"
     },
     {
-      "id": "serbatoi-classic",
-      "label": "Serbatoi & Classic"
+      "id": "serbatoi",
+      "label": "Serbatoi"
     }
   ]
 }
