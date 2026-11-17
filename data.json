@@ -7,12 +7,17 @@
     "phone": "+39 081 1234567",
     "email": "info@colorbike.it",
     "address": "Via Petraro 381, 80050 Santa Maria La Carità (NA)",
+    "socials": {
+      "instagram": "https://www.instagram.com/color.bike/",
+      "tiktok": "https://www.tiktok.com/@colorbike",
+      "facebook": "https://www.facebook.com/p/Colorbike-100055205113946/?locale=it_IT"
+    },
     "hours": {
       "weekdays": "Lun - Ven: 08:30 - 13:00 | 14:30 - 19:00",
       "saturday": "Sabato: Chiuso",
       "sunday": "Domenica: Chiuso"
     },
-    "version": "2.2.0"
+    "version": "2.4.0"
   },
   "services": [
     {

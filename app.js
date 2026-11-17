@@ -9,7 +9,7 @@
 // 1. CONFIGURATION & STATE
 // =============================================================================
 const CONFIG = {
-  storageKey: 'colorbike_store_v5',
+  storageKey: 'colorbike_store_v6',
   pinStorageKey: 'colorbike_admin_pin',
   defaultPin: '0000',
   whatsappNumber: '393401234567'
@@ -174,7 +174,11 @@ function renderPortfolio(filterCategory = 'tutti') {
         
         <!-- Red Laser Divider Handle -->
         <div class="laser-handle">
-          <div class="handle-center-puck">◀ ▶</div>
+          <div class="handle-center-puck">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="m9 18-6-6 6-6M15 6l6 6-6 6"/>
+            </svg>
+          </div>
         </div>
 
         <!-- Corner Tags -->
@@ -184,7 +188,12 @@ function renderPortfolio(filterCategory = 'tutti') {
 
       <div class="portfolio-details">
         <div class="portfolio-header-row">
-          <span class="portfolio-bike-badge">🏍 ${escapeHtml(item.model || 'Moto Racing')}</span>
+          <span class="portfolio-bike-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+            ${escapeHtml(item.model || 'Moto Stradale')}
+          </span>
           <span class="portfolio-date">${escapeHtml(item.date || '')}</span>
         </div>
         <h3 class="portfolio-title">${escapeHtml(item.title)}</h3>
@@ -529,7 +538,7 @@ function renderAdminServicesList() {
   STATE.data.services.forEach((s, idx) => {
     const item = document.createElement('div');
     item.className = 'admin-slot-item';
-    const statusText = s.status === 'active' ? '🟢 ATTIVO' : '⚪ VUOTO / IN ARRIVO';
+    const statusText = s.status === 'active' ? '[ATTIVO]' : '[VUOTO]';
     item.innerHTML = `
       <div class="slot-item-info">
         <h5>Slot ${idx + 1}: ${escapeHtml(s.title)}</h5>
