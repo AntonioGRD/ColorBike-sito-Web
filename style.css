@@ -5,10 +5,10 @@
 
 :root {
   /* Core Color Palette */
-  --bg-main: #09090B;
-  --bg-surface: #111116;
-  --bg-card: #16161D;
-  --bg-card-hover: #1D1D26;
+  --bg-main: #FFFFFF;
+  --bg-surface: #F8FAFC;
+  --bg-card: #141419;
+  --bg-card-hover: #1C1C24;
   --bg-glass: rgba(17, 17, 22, 0.85);
 
   /* Racing Accent Colors */
@@ -20,8 +20,8 @@
 
   /* Technical Grays & White */
   --text-white: #FFFFFF;
-  --text-primary: #F4F4F5;
-  --text-muted: #A1A1AA;
+  --text-primary: #18181B;
+  --text-muted: #52525B;
   --text-dark: #71717A;
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-racing: rgba(225, 29, 72, 0.35);
@@ -53,11 +53,11 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  color-scheme: dark;
+  background-color: #FFFFFF;
 }
 
 body.racing-dark {
-  background-color: var(--bg-main);
+  background-color: #FFFFFF;
   color: var(--text-primary);
   font-family: var(--font-body);
   line-height: 1.6;
@@ -66,14 +66,14 @@ body.racing-dark {
   min-height: 100vh;
 }
 
-/* Carbon & Telemetry Ambient Grid */
+/* Carbon & Telemetry Ambient Grid on White Background */
 .hud-grid-ambient {
   position: fixed;
   inset: 0;
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    radial-gradient(circle at 50% 0%, rgba(225, 29, 72, 0.08) 0%, transparent 60%);
+    linear-gradient(to right, rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+    radial-gradient(circle at 50% 0%, rgba(225, 29, 72, 0.04) 0%, transparent 60%);
   background-size: 40px 40px, 40px 40px, 100% 100%;
   pointer-events: none;
   z-index: 0;
@@ -86,7 +86,7 @@ body.racing-dark {
   transform: translateX(-50%);
   width: 900px;
   height: 450px;
-  background: radial-gradient(ellipse at center, rgba(225, 29, 72, 0.15) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(225, 29, 72, 0.06) 0%, transparent 70%);
   filter: blur(80px);
   pointer-events: none;
   z-index: 0;
@@ -705,6 +705,7 @@ textarea {
   padding: 100px 0;
   position: relative;
   z-index: 2;
+  background-color: #FFFFFF;
 }
 
 .content-container {
@@ -728,7 +729,7 @@ textarea {
 }
 
 .hud-bracket {
-  color: var(--text-dark);
+  color: #A1A1AA;
 }
 
 .section-title {
@@ -736,14 +737,14 @@ textarea {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 900;
   letter-spacing: 0.05em;
-  color: var(--text-white);
+  color: #09090B;
   text-transform: uppercase;
   margin-bottom: 12px;
 }
 
 .section-desc {
   font-size: 1.1rem;
-  color: var(--text-muted);
+  color: #52525B;
   max-width: 620px;
   margin: 0 auto 20px;
 }
@@ -861,9 +862,9 @@ textarea {
 
 /* Service Card (Empty Slot) */
 .service-card.empty-slot {
-  background: rgba(17, 17, 22, 0.4);
-  border: 2px dashed #45121b;
-  box-shadow: none;
+  background: #FFFFFF;
+  border: 2px dashed rgba(225, 29, 72, 0.45);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
   cursor: pointer;
   align-items: center;
   justify-content: center;
@@ -873,16 +874,16 @@ textarea {
 
 .service-card.empty-slot:hover {
   border-color: var(--red-racing);
-  background: rgba(225, 29, 72, 0.06);
+  background: rgba(225, 29, 72, 0.04);
   transform: translateY(-4px);
-  box-shadow: 0 0 20px rgba(225, 29, 72, 0.25);
+  box-shadow: 0 8px 25px rgba(225, 29, 72, 0.15);
 }
 
 .empty-slot-icon {
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  border: 2px dashed #45121b;
+  border: 2px dashed var(--red-racing);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -904,13 +905,13 @@ textarea {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--text-white);
+  color: #09090B;
   margin-bottom: 8px;
 }
 
 .empty-slot-desc {
   font-size: 0.9rem;
-  color: var(--text-dark);
+  color: #52525B;
   max-width: 260px;
   margin-bottom: 16px;
 }
@@ -940,9 +941,9 @@ textarea {
 }
 
 .filter-chip {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  color: var(--text-muted);
+  background: #F4F4F5;
+  border: 1px solid #E4E4E7;
+  color: #52525B;
   font-family: var(--font-tech);
   font-size: 0.95rem;
   font-weight: 700;
@@ -954,13 +955,13 @@ textarea {
 }
 
 .filter-chip:hover {
-  color: var(--text-white);
+  color: #09090B;
   border-color: var(--border-racing);
 }
 
 .filter-chip.active {
   background: var(--red-racing);
-  color: var(--text-white);
+  color: #FFFFFF;
   border-color: var(--red-racing);
   box-shadow: 0 0 15px var(--red-glow);
 }
@@ -1125,23 +1126,24 @@ textarea {
 .btn-add-work-dashed {
   width: 100%;
   border: 2px dashed var(--red-racing);
-  background: rgba(225, 29, 72, 0.05);
+  background: #FFFFFF;
   padding: 24px;
   border-radius: var(--radius-card);
-  color: var(--text-white);
+  color: #09090B;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 6px;
   cursor: pointer;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
   transition: all var(--transition-fast);
 }
 
 .btn-add-work-dashed:hover {
-  background: rgba(225, 29, 72, 0.12);
+  background: rgba(225, 29, 72, 0.05);
   transform: translateY(-2px);
-  box-shadow: 0 0 25px rgba(225, 29, 72, 0.3);
+  box-shadow: 0 8px 25px rgba(225, 29, 72, 0.2);
 }
 
 .plus-icon {
