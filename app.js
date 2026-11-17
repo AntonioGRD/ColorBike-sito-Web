@@ -9,7 +9,7 @@
 // 1. CONFIGURATION & STATE
 // =============================================================================
 const CONFIG = {
-  storageKey: 'colorbike_store_v11',
+  storageKey: 'colorbike_store_v12',
   pinStorageKey: 'colorbike_admin_pin',
   defaultPin: '0000',
   whatsappNumber: '393384544717'
@@ -29,29 +29,26 @@ const STATE = {
 // 2. DATA INITIALIZATION & LOCALSTORAGE SYNC
 // =============================================================================
 async function initAppData() {
-  // Check LocalStorage first for instant updates
-  const cached = localStorage.getItem(CONFIG.storageKey);
-  if (cached) {
-    try {
-      STATE.data = JSON.parse(cached);
-    } catch (e) {
-      console.warn('Errore parsing cache locale, carico data.json', e);
+  // Fetch data.json on each load to guarantee updated portfolio and categories
+  try {
+    const res = await fetch('data.json?v=' + Date.now());
+    if (res.ok) {
+      STATE.data = await res.json();
+      saveStateToStorage();
+    }
+  } catch (err) {
+    console.warn('Fetch data.json fallita, fallback su cache locale', err);
+    const cached = localStorage.getItem(CONFIG.storageKey);
+    if (cached) {
+      try {
+        STATE.data = JSON.parse(cached);
+      } catch (e) {}
     }
   }
 
-  // Fallback to data.json if cache empty or invalid
   if (!STATE.data || !STATE.data.services || !STATE.data.portfolio) {
-    try {
-      const res = await fetch('data.json');
-      if (res.ok) {
-        STATE.data = await res.json();
-        saveStateToStorage();
-      }
-    } catch (err) {
-      console.error('Fetch data.json fallita, uso configurazione di sicurezza', err);
-      STATE.data = getFallbackData();
-      saveStateToStorage();
-    }
+    STATE.data = getFallbackData();
+    saveStateToStorage();
   }
 
   renderServices();
@@ -409,7 +406,7 @@ function setupQuoteModal() {
       const bike = document.getElementById('qf-bike').value.trim() || 'la mia moto';
       const serviceSelect = document.getElementById('qf-service');
       const serviceText = serviceSelect && serviceSelect.selectedIndex >= 0 ? serviceSelect.options[serviceSelect.selectedIndex].text : 'Intervento Estetico';
-      const text = encodeURIComponent(`Ciao ColorBike! Vorrei informazioni e preventivo per "${serviceText}" sulla mia ${bike}. Vi invio anche le foto.`);
+      const text = encodeURIComponent(`Ciao ColorBike! Vorrei informazioni e un preventivo per "${serviceText}" sulla mia ${bike}. Vi invio in allegato anche le foto per una stima precisa.`);
       window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${text}`, '_blank');
     });
   }
@@ -425,7 +422,7 @@ function setupQuoteModal() {
       const serviceText = serviceSelect && serviceSelect.selectedIndex >= 0 ? serviceSelect.options[serviceSelect.selectedIndex].text : 'Intervento Estetico';
       const details = document.getElementById('qf-details').value.trim();
 
-      const message = `Richiesta Preventivo ColorBike:\nNome: ${name}\nTel: ${phone}\nMoto: ${bike}\nIntervento: ${serviceText}\nDettagli: ${details}`;
+      const message = `Richiesta Preventivo ColorBike:\nNome: ${name}\nTel: ${phone}\nMoto: ${bike}\nIntervento: ${serviceText}\nDettagli: ${details}\n\n[Allego le foto della moto / serbatoio per una stima precisa]`;
       const waUrl = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
 
       showToast('Richiesta inviata! Reindirizzamento a WhatsApp...');
@@ -915,6 +912,131 @@ function setupExportImport() {
 // =========================================================
 // 12. NAVBAR SCROLL & MOBILE DRAWER
 // =========================================================
+
+// =========================================================
+// 12B. SCROLL TO TOP HUD BUTTON
+// =========================================================
+function setupScrollToTop() {
+  const btnTop = document.getElementById('btn-back-to-top');
+  if (!btnTop) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      btnTop.classList.remove('hidden');
+    } else {
+      btnTop.classList.add('hidden');
+    }
+  });
+
+  btnTop.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
+// =========================================================
+// 12C. PRIVACY, COOKIE POLICY & COOKIE BANNER HUD
+// =========================================================
+function setupLegalAndPrivacy() {
+  const modal = document.getElementById('modal-legal');
+  const modalTitle = document.getElementById('legal-modal-title');
+  const modalBody = document.getElementById('legal-content-body');
+  const btnClose = document.getElementById('btn-close-legal');
+  const btnConfirm = document.getElementById('btn-confirm-legal');
+  const btnOpenPrivacy = document.getElementById('btn-open-privacy');
+  const btnOpenCookie = document.getElementById('btn-open-cookie');
+  const btnCookieInfo = document.getElementById('btn-cookie-info');
+  const banner = document.getElementById('cookie-banner');
+  const btnAcceptCookie = document.getElementById('btn-cookie-accept');
+
+  const PRIVACY_HTML = `
+    <h3>Informativa sul Trattamento dei Dati Personali (GDPR)</h3>
+    <p>Ai sensi dell'art. 13 del Regolamento UE 2016/679 (GDPR), si informano i gentili utenti che i dati forniti spontaneamente tramite il modulo di richiesta preventivo o contatto telefonico e WhatsApp sono trattati esclusivamente per finalit&agrave; strettamente legate all'elaborazione del preventivo tecnico richiesto e alla gestione del rapporto di assistenza per i servizi di verniciatura e personalizzazione moto.</p>
+    
+    <h3>Titolare del Trattamento</h3>
+    <p><strong>CARROZZERIA di GATTO VITTORIO</strong><br>
+    P.IVA: 09180971211<br>
+    Sede: Via Petraro 381, 80050 Santa Maria La Carit&agrave; (NA)<br>
+    Recapito Telefonico & WhatsApp: +39 338 454 4717</p>
+
+    <h3>Dati Trattati e Finalit&agrave;</h3>
+    <ul>
+      <li><strong>Nome e Recapito Telefonico:</strong> utilizzati unicamente per ricontattare il cliente e fornire il preventivo di spesa o chiarimenti tecnici.</li>
+      <li><strong>Dettagli Veicolo & Fotografie:</strong> analizzati al solo scopo di stimare le ore di manodopera, i materiali di consumo e il ciclo termico di verniciatura o riparazione.</li>
+    </ul>
+
+    <h3>Conservazione e Diritti dell'Interessato</h3>
+    <p>I dati non saranno in alcun caso ceduti a soggetti terzi o utilizzati per campagne pubblicitarie o newsletter automatizzate non richieste. L'utente ha il diritto in qualunque momento di richiedere la verifica, la rettifica o la cancellazione dei propri dati contattando direttamente il titolare tramite WhatsApp o recapito telefonico ufficiale.</p>
+  `;
+
+  const COOKIE_HTML = `
+    <h3>Informativa Estesa sull'Utilizzo dei Cookie</h3>
+    <p>Il presente sito web utilizza esclusivamente <strong>cookie tecnici e funzionali</strong> strettamente necessari a garantire la corretta navigazione, la visualizzazione dei contenuti grafici e la memorizzazione temporanea delle preferenze dell'utente (come la preferenza sul consenso cookie).</p>
+
+    <h3>Tipologie di Cookie Utilizzati</h3>
+    <ul>
+      <li><strong>Cookie di Navigazione / Tecnici:</strong> garantiscono la normale fruizione del sito web e la visualizzazione interattiva dei componenti racing e della galleria lavori.</li>
+      <li><strong>Storage Locale di Sessione:</strong> memorizza la scelta di consenso cookie per evitare la riproposizione continua dell'avviso.</li>
+    </ul>
+
+    <h3>Cookie di Profilazione e Terze Parti</h3>
+    <p>Questo sito <strong>NON</strong> fa uso di cookie di profilazione commerciale n&eacute; di tracciamento pubblicitario o marketing mirato. I collegamenti esterni ai canali social (Instagram, TikTok, Facebook, LinkedIn) aprono i rispettivi canali in finestre separate gestite dalle rispettive piattaforme.</p>
+    
+    <h3>Gestione dei Cookie nel Browser</h3>
+    <p>L'utente pu&ograve; in qualunque momento cancellare o disabilitare i cookie modificando le preferenze sulla privacy del proprio browser (Chrome, Safari, Firefox, Edge).</p>
+  `;
+
+  function openLegal(type) {
+    if (!modal || !modalTitle || !modalBody) return;
+    if (type === 'privacy') {
+      modalTitle.textContent = 'INFORMATIVA PRIVACY';
+      modalBody.innerHTML = PRIVACY_HTML;
+    } else {
+      modalTitle.textContent = 'COOKIE POLICY';
+      modalBody.innerHTML = COOKIE_HTML;
+    }
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLegal() {
+    if (!modal) return;
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  if (btnOpenPrivacy) btnOpenPrivacy.addEventListener('click', () => openLegal('privacy'));
+  if (btnOpenCookie) btnOpenCookie.addEventListener('click', () => openLegal('cookie'));
+  if (btnCookieInfo) btnCookieInfo.addEventListener('click', () => openLegal('cookie'));
+  if (btnClose) btnClose.addEventListener('click', closeLegal);
+  if (btnConfirm) btnConfirm.addEventListener('click', closeLegal);
+
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeLegal();
+    });
+  }
+
+  // Cookie Consent logic
+  if (banner) {
+    const consent = localStorage.getItem('colorbike_cookie_consent');
+    if (!consent) {
+      banner.classList.remove('hidden');
+    } else {
+      banner.classList.add('hidden');
+    }
+
+    if (btnAcceptCookie) {
+      btnAcceptCookie.addEventListener('click', () => {
+        localStorage.setItem('colorbike_cookie_consent', 'accepted');
+        banner.classList.add('hidden');
+      });
+    }
+  }
+}
+
 function setupNavigation() {
   const header = document.getElementById('navbar');
   const mobileToggle = document.getElementById('btn-mobile-toggle');
@@ -987,7 +1109,7 @@ function getFallbackData() {
       subBrand: "CARROZZERIA di GATTO VITTORIO",
       piva: "09180971211",
       address: "Via Petraro 381, 80050 Santa Maria La Carità (NA)",
-      whatsapp: "+393401234567"
+      whatsapp: "+39 338 454 4717"
     },
     services: [
       { id: 1, status: "active", icon: "spray", title: "Verniciatura Moto e Scooter", description: "Ciclo termico a forno a 65°C, tinte originali OEM per ogni moto o scooter.", tags: ["Tinte OEM", "Moto & Scooter"] },
@@ -1007,6 +1129,8 @@ function getFallbackData() {
 // =========================================================
 document.addEventListener('DOMContentLoaded', () => {
   setupNavigation();
+  setupScrollToTop();
+  setupLegalAndPrivacy();
   setupFilterListeners();
   setupQuoteModal();
   setupAdminPanel();

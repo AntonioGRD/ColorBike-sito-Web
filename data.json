@@ -5,7 +5,6 @@
     "piva": "09180971211",
     "whatsapp": "+39 338 454 4717",
     "phone": "+39 338 454 4717",
-    "email": "info@colorbike.it",
     "address": "Via Petraro 381, 80050 Santa Maria La Carità (NA)",
     "socials": {
       "instagram": "https://www.instagram.com/color.bike/",
@@ -212,11 +211,11 @@
     },
     {
       "id": 1012,
-      "title": "Triumph Speed Triple — Verniciatura Integrale Special",
-      "model": "Triumph Speed Triple",
-      "category": "moto-stradali",
+      "title": "Triumph — Serbatoio Bicolore Bordeaux Metallizzato & Argento",
+      "model": "Triumph Classic / Speed",
+      "category": "serbatoi",
       "date": "2026-09-12",
-      "notes": "Personalizzazione verniciatura a specchio per carrozzeria e dettagli metallici con ciclo termico a 65°C e finitura antiriflesso sui dettagli d'ombra.",
+      "notes": "Verniciatura bicolore artigianale a forno con calotta superiore in Bordeaux Metallizzato profondo e fascia inferiore in Argento, sigillata con trasparente 2K lucido a specchio.",
       "beforeImg": "",
       "afterImg": "img/portfolio/triumph_speed_custom.jpg"
     },
@@ -319,6 +318,16 @@
       "notes": "Stuccatura serbatoio, raddrizzatura botte da caduta e verniciatura bicolore con trasparente UHS ad alto spessore e lucidatura a mano.",
       "beforeImg": "",
       "afterImg": "img/portfolio/kawasaki_tank_special.jpg"
+    },
+    {
+      "id": 1023,
+      "title": "Yamaha YZF-R1 — Serbatoio Giallo Fluo & Dettagli Nero",
+      "model": "Yamaha YZF-R1",
+      "category": "serbatoi",
+      "date": "2026-11-09",
+      "notes": "Verniciatura ad alta visibilità in Giallo Fluo brillante multistrato con logo diapason Yamaha aerografato in nero lucido sotto trasparente antigraffio.",
+      "beforeImg": "",
+      "afterImg": "img/portfolio/yamaha_r1_fluo.jpg"
     }
   ],
   "adminPin": "0000",
