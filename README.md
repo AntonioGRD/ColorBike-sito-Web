@@ -22,7 +22,7 @@ Web Application ad alte prestazioni sviluppata per **ColorBike by CARROZZERIA di
 - **Sezione Servizi & Specializzazioni (6 Schede Attive, Zero Slot Vuoti)**:
   1. Verniciatura Moto e Scooter (Ciclo termico a forno a 65°C)
   2. Grafiche Personalizzate (Livree su misura e loghi sotto trasparente)
-  3. Aerografo (Lavorazioni artistiche a mano libera, sfumature 3D)
+  3. Aerografo & Cubicatura (Lavorazioni artistiche a mano libera, sfumature 3D e idrostampa carbon look)
   4. Personalizzazione Totale Moto (Restyling estetico completo a 360° per moto stradali)
   5. Verniciatura Caschi (Integrali, jet e modulari, grafiche replica)
   6. Riparazione in caso di Incidenti (Saldatura ABS, raddrizzatura serbatoi)

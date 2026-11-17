@@ -42,10 +42,10 @@
       "id": 3,
       "status": "active",
       "icon": "brush",
-      "title": "Aerografo",
-      "subtitle": "Lavorazioni artistiche a mano libera",
-      "description": "Decorazioni artistiche ad aerografo di precisione assoluta eseguite artigianalmente a mano: sfumature tridimensionali, effetti speciali, fiamme, stemmi e illustrazioni personalizzate su serbatoi, carene e caschi.",
-      "tags": ["Aerografia a Mano", "Effetti 3D & Sfumature", "Caschi & Serbatoi"]
+      "title": "Aerografo & Cubicatura",
+      "subtitle": "Lavorazioni artistiche a mano libera & idrostampa texture",
+      "description": "Decorazioni artistiche ad aerografo di precisione assoluta eseguite artigianalmente a mano ed esclusiva cubicatura (water transfer printing): sfumature tridimensionali, effetti speciali, fiamme, stemmi o applicazione di texture fibra di carbonio (twill, forged), camouflage e finiture tecniche su serbatoi, carene, carter, specchietti e caschi, protette con trasparente 2K ad altissima resistenza.",
+      "tags": ["Aerografia a Mano", "Cubicatura & Carbon Look", "Effetti 3D & Dettagli"]
     },
     {
       "id": 4,

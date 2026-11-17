@@ -9,7 +9,7 @@
 // 1. CONFIGURATION & STATE
 // =============================================================================
 const CONFIG = {
-  storageKey: 'colorbike_store_v7',
+  storageKey: 'colorbike_store_v9',
   pinStorageKey: 'colorbike_admin_pin',
   defaultPin: '0000',
   whatsappNumber: '393401234567'
@@ -930,7 +930,7 @@ function getFallbackData() {
     services: [
       { id: 1, status: "active", icon: "spray", title: "Verniciatura Moto e Scooter", description: "Ciclo termico a forno a 65°C, tinte originali OEM per ogni moto o scooter.", tags: ["Tinte OEM", "Moto & Scooter"] },
       { id: 2, status: "active", icon: "flag", title: "Grafiche Personalizzate", description: "Design e livree racing o stradali su misura sigillate sotto trasparente.", tags: ["Livree", "Loghi"] },
-      { id: 3, status: "active", icon: "brush", title: "Aerografo", description: "Lavorazioni artistiche a mano libera, sfumature 3D ed effetti speciali.", tags: ["Aerografia", "Caschi & Serbatoi"] },
+      { id: 3, status: "active", icon: "brush", title: "Aerografo & Cubicatura", description: "Lavorazioni artistiche a mano libera, sfumature 3D ed idrostampa cubicatura (carbon look).", tags: ["Aerografia", "Cubicatura", "Caschi & Carene"] },
       { id: 4, status: "active", icon: "tuning", title: "Personalizzazione Totale Moto", description: "Restyling estetico completo a 360° per moto stradali e maxiscooter.", tags: ["Restyling 360°", "Cambi Colore"] },
       { id: 5, status: "active", icon: "helmet", title: "Verniciatura Caschi", description: "Personalizzazione grafica e verniciatura caschi integrali, jet e modulari.", tags: ["Caschi", "Livree Pilota"] },
       { id: 6, status: "active", icon: "shield", title: "Riparazione in caso di Incidenti", description: "Ripristino carene da scivolata, saldatura plastiche ABS e stuccatura serbatoi.", tags: ["Saldatura ABS", "Ripristino Danni"] }
