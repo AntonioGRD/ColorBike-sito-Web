@@ -1,6 +1,6 @@
-# ColorBike — Carrozzeria Gatto • Linea Moto 🏍️💨
+# ColorBike — Carrozzeria Gatto 🏍️💨
 
-Web Application ad alte prestazioni sviluppata per **ColorBike (Carrozzeria Gatto - Linea Moto)**, officina specializzata in verniciatura a forno, riparazione carene in ABS/compositi e realizzazione livree racing per moto stradali e da pista.
+Web Application ad alte prestazioni sviluppata per **ColorBike (Carrozzeria Gatto)**, officina specializzata in verniciatura a forno, riparazione carene in ABS/compositi e personalizzazioni estetiche per moto stradali.
 
 ![ColorBike Logo](logo_transparent.png)
 
@@ -78,7 +78,7 @@ ColorBike sito Web/
 ---
 
 ## 📞 Contatti Officina
-- **Brand**: ColorBike — Carrozzeria Gatto • Linea Moto
-- **Sede**: Via della Pista 42, Torino (TO)
+- **Brand**: ColorBike — Carrozzeria Gatto
+- **Sede**: Via Torino 42, Rivalta di Torino (TO)
 - **Email**: info@colorbike.it
 - **Assistenza / Foto Danni**: [WhatsApp Diretto](https://wa.me/393401234567)

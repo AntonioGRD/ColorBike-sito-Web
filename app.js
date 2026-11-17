@@ -1,6 +1,6 @@
 /**
- * COLORBIKE — CARROZZERIA GATTO • LINEA MOTO
- * High-Performance Vanilla JS Architecture (v2.0)
+ * COLORBIKE — CARROZZERIA GATTO
+ * High-Performance Vanilla JS Architecture (v2.1)
  */
 
 'use strict';
@@ -9,7 +9,7 @@
 // 1. CONFIGURATION & STATE
 // =============================================================================
 const CONFIG = {
-  storageKey: 'colorbike_store_v2',
+  storageKey: 'colorbike_store_v3',
   pinStorageKey: 'colorbike_admin_pin',
   defaultPin: '0000',
   whatsappNumber: '393401234567'
@@ -900,13 +900,13 @@ function getFallbackData() {
   return {
     meta: {
       brand: "ColorBike",
-      subBrand: "Carrozzeria Gatto • Linea Moto",
+      subBrand: "Carrozzeria Gatto",
       whatsapp: "+393401234567"
     },
     services: [
-      { id: 1, status: "active", icon: "spray", title: "Verniciatura a Forno", description: "Ciclo termico in cabina a pressione positiva a 65°C.", tags: ["Lucido", "Opaco"] },
-      { id: 2, status: "active", icon: "shield", title: "Riparazione Carene ABS", description: "Saldatura molecolare e ripristino staffe.", tags: ["ABS", "Fibra"] },
-      { id: 3, status: "active", icon: "flag", title: "Livree Racing", description: "Design su misura replica MotoGP e SBK.", tags: ["Pista", "Wrapping"] },
+      { id: 1, status: "active", icon: "spray", title: "Verniciatura a Forno", description: "Ciclo termico in cabina a pressione positiva a 65°C.", tags: ["Tinte OEM", "Lucido / Opaco"] },
+      { id: 2, status: "active", icon: "shield", title: "Riparazione Carene & Plastiche", description: "Saldatura molecolare e ripristino staffe.", tags: ["ABS", "Serbatoi"] },
+      { id: 3, status: "active", icon: "flag", title: "Personalizzazioni & Grafiche", description: "Design su misura per moto stradali.", tags: ["Grafiche", "Dettagli"] },
       { id: 4, status: "empty", icon: "plus", title: "Slot Disponibile", description: "Servizio in arrivo.", tags: [] },
       { id: 5, status: "empty", icon: "plus", title: "Slot Disponibile", description: "Servizio in arrivo.", tags: [] },
       { id: 6, status: "empty", icon: "plus", title: "Slot Disponibile", description: "Servizio in arrivo.", tags: [] }

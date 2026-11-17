@@ -1,17 +1,17 @@
 {
   "meta": {
     "brand": "ColorBike",
-    "subBrand": "Carrozzeria Gatto • Linea Moto",
+    "subBrand": "Carrozzeria Gatto",
     "whatsapp": "+393401234567",
     "phone": "+39 011 9876543",
     "email": "info@colorbike.it",
-    "address": "Via della Pista 42, Torino (TO)",
+    "address": "Via Torino 42, Rivalta di Torino (TO)",
     "hours": {
       "weekdays": "Lun - Ven: 08:30 - 12:30 | 14:00 - 18:30",
       "saturday": "Sabato: 08:30 - 12:30 (su appuntamento)",
       "sunday": "Domenica: Chiuso"
     },
-    "version": "2.0.0"
+    "version": "2.1.0"
   },
   "services": [
     {
@@ -19,27 +19,27 @@
       "status": "active",
       "icon": "spray",
       "title": "Verniciatura a Forno",
-      "subtitle": "Ciclo termico certificato",
-      "description": "Verniciatura professionale in cabina a pressione positiva con essiccazione a forno a 65°C. Massima brillantezza, adesione totale su supporti plastici e resistenza UV estrema.",
-      "tags": ["Finitura Lucida / Opaca", "Colori Originali & Candy", "Trattamento Ceramico"]
+      "subtitle": "Ciclo termico a regola d'arte",
+      "description": "Verniciatura professionale in cabina a pressione positiva con essiccazione a forno a 65°C. Massima brillantezza, adesione totale su supporti plastici e metallici e resistenza UV estrema per la tua moto stradale.",
+      "tags": ["Tinte Originali OEM", "Finitura Lucida / Opaca", "Trasparente Antigraffio"]
     },
     {
       "id": 2,
       "status": "active",
       "icon": "shield",
-      "title": "Riparazione Carene ABS & Fibra",
-      "subtitle": "Ripristino strutturale millimetrico",
-      "description": "Saldatura molecolare a filo caldo per plastiche OEM (ABS/PA) e ricostruzione composita in fibra di vetro e carbonio. Recupero geometrie e punti di ancoraggio originali.",
-      "tags": ["Saldatura ABS", "Vetroresina & Carbonio", "Dime di Controllo"]
+      "title": "Riparazione Carene & Plastiche",
+      "subtitle": "Ripristino danni da scivolata o urti",
+      "description": "Saldatura plastica molecolare a caldo per carene OEM in ABS e ricostruzione parti danneggiate. Riparazione crepe, ricostruzione ganci e punti di fissaggio originali senza dover sostituire i pezzi.",
+      "tags": ["Saldatura ABS", "Ricostruzione Ganci", "Riparazione Serbatoi"]
     },
     {
       "id": 3,
       "status": "active",
       "icon": "flag",
-      "title": "Livree Racing & Replica MotoGP",
-      "subtitle": "Progettazione grafica da competizione",
-      "description": "Progettazione grafica su misura e applicazione grafiche sotto trasparente o wrapping cast ad alta conformabilità. Dalla replica SBK alle creazioni pista uniche al mondo.",
-      "tags": ["Repliche SBK & MotoGP", "Grafiche Sotto Trasparente", "Tabelle Portanumero"]
+      "title": "Personalizzazioni & Grafiche",
+      "subtitle": "Look unico per la tua moto",
+      "description": "Personalizzazione estetica su misura: cambi colore completi, dettagli bicolore, grafiche personalizzate protette sotto trasparente o wrapping di precisione per valorizzare la tua moto stradale.",
+      "tags": ["Grafiche su Misura", "Loghi Sotto Trasparente", "Colori Speciali"]
     },
     {
       "id": 4,
@@ -72,31 +72,31 @@
   "portfolio": [
     {
       "id": 1001,
-      "title": "Ducati Panigale V4 S — Ripristino Pista & Verniciatura",
+      "title": "Ducati Panigale V4 S — Ripristino Carena & Verniciatura",
       "model": "Ducati Panigale V4 S",
       "category": "verniciatura",
       "date": "2026-10-24",
-      "notes": "Carena laterale destra e codino lesionati post-scivolata al Mugello. Saldatura plastica ABS, ricostruzione staffe interne, stuccatura poliestere e riverniciatura in Rosso Corsa Ducati originale a triplo strato trasparente lucido.",
+      "notes": "Carena laterale destra e codino lesionati da una scivolata su asfalto. Saldatura plastica ABS, ricostruzione staffe interne, stuccatura e riverniciatura in Rosso Corsa Ducati originale con finitura lucida a specchio.",
       "beforeImg": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1200&q=80",
       "afterImg": "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1200&q=80"
     },
     {
       "id": 1002,
-      "title": "Yamaha YZF-R1 — Livrea Custom Monster Racing Edition",
+      "title": "Yamaha YZF-R1 — Personalizzazione Estetica Completa",
       "model": "Yamaha YZF-R1M",
       "category": "livree",
       "date": "2026-09-18",
-      "notes": "Trasformazione da colorazione stradale stock a livrea racing completa satinata nero profondo con dettagli verde fluo, loghi tecnici aerografati e doppia mano di trasparente opaco ad alta resistenza chimica.",
+      "notes": "Personalizzazione estetica con verniciatura satinata nero profondo, dettagli grafici a contrasto e doppia mano di trasparente opaco protettivo ad alta resistenza chimica.",
       "beforeImg": "https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?auto=format&fit=crop&w=1200&q=80",
       "afterImg": "https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&w=1200&q=80"
     },
     {
       "id": 1003,
-      "title": "BMW S1000RR — Ricostruzione Carena Anteriore & Cupolino",
-      "model": "BMW S1000RR M-Package",
+      "title": "BMW S1000RR — Ricostruzione Cupolino & Parafango",
+      "model": "BMW S1000RR",
       "category": "riparazione",
       "date": "2026-08-30",
-      "notes": "Riparazione complessa musetto e condotto airbox in fibra composita con rottura multipla. Ripristino accoppiamenti fari a tolleranza zero e finitura Motorsport Tricolore BMW.",
+      "notes": "Riparazione cupolino anteriore e parafango con rottura multipla. Ripristino accoppiamenti fari a tolleranza perfetta e riverniciatura nei colori originali Motorsport.",
       "beforeImg": "https://images.unsplash.com/photo-1615172282427-9a57ef2d142e?auto=format&fit=crop&w=1200&q=80",
       "afterImg": "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1200&q=80"
     }
