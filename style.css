@@ -2273,7 +2273,14 @@ textarea {
   }
 
   .nav-social-strip {
-    display: none;
+    display: flex;
+    gap: 6px;
+    margin-right: 6px;
+  }
+
+  .nav-social-link {
+    width: 32px;
+    height: 32px;
   }
 
   .portfolio-grid {
@@ -2317,21 +2324,6 @@ textarea {
   border-color: var(--red-racing);
   transform: translateY(-2px);
   box-shadow: 0 0 12px var(--red-glow);
-}
-
-.mobile-drawer-socials {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 16px 0 8px;
-  border-top: 1px solid var(--border-subtle);
-  margin-top: 8px;
-}
-
-.mobile-drawer-socials .nav-social-link {
-  width: 42px;
-  height: 42px;
 }
 
 /* =============================================================================
