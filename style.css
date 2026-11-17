@@ -5,10 +5,10 @@
 
 :root {
   /* Core Color Palette */
-  --bg-main: #FFFFFF;
-  --bg-surface: #F8FAFC;
-  --bg-card: #141419;
-  --bg-card-hover: #1C1C24;
+  --bg-main: #09090B;
+  --bg-surface: #111116;
+  --bg-card: #16161D;
+  --bg-card-hover: #1D1D26;
   --bg-glass: rgba(17, 17, 22, 0.85);
 
   /* Racing Accent Colors */
@@ -20,8 +20,8 @@
 
   /* Technical Grays & White */
   --text-white: #FFFFFF;
-  --text-primary: #18181B;
-  --text-muted: #52525B;
+  --text-primary: #F4F4F5;
+  --text-muted: #A1A1AA;
   --text-dark: #71717A;
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-racing: rgba(225, 29, 72, 0.35);
@@ -53,11 +53,11 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  background-color: #FFFFFF;
+  color-scheme: dark;
 }
 
 body.racing-dark {
-  background-color: #FFFFFF;
+  background-color: var(--bg-main);
   color: var(--text-primary);
   font-family: var(--font-body);
   line-height: 1.6;
@@ -66,14 +66,14 @@ body.racing-dark {
   min-height: 100vh;
 }
 
-/* Carbon & Telemetry Ambient Grid on White Background */
+/* Carbon & Telemetry Ambient Grid */
 .hud-grid-ambient {
   position: fixed;
   inset: 0;
   background-image:
-    linear-gradient(to right, rgba(0, 0, 0, 0.035) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.035) 1px, transparent 1px),
-    radial-gradient(circle at 50% 0%, rgba(225, 29, 72, 0.04) 0%, transparent 60%);
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    radial-gradient(circle at 50% 0%, rgba(225, 29, 72, 0.08) 0%, transparent 60%);
   background-size: 40px 40px, 40px 40px, 100% 100%;
   pointer-events: none;
   z-index: 0;
@@ -86,7 +86,7 @@ body.racing-dark {
   transform: translateX(-50%);
   width: 900px;
   height: 450px;
-  background: radial-gradient(ellipse at center, rgba(225, 29, 72, 0.06) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(225, 29, 72, 0.15) 0%, transparent 70%);
   filter: blur(80px);
   pointer-events: none;
   z-index: 0;
@@ -113,7 +113,7 @@ textarea {
   top: 0;
   left: 0;
   right: 0;
-  height: 112px;
+  height: 84px;
   background: rgba(9, 9, 11, 0.94);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-subtle);
@@ -123,7 +123,7 @@ textarea {
 }
 
 .site-header.scrolled {
-  height: 90px;
+  height: 70px;
   background: rgba(9, 9, 11, 0.98);
   border-bottom: 1px solid var(--border-racing);
   box-shadow: 0 10px 32px rgba(0, 0, 0, 0.9);
@@ -199,172 +199,40 @@ textarea {
 }
 
 /* =========================================================
-   CENTER EMBLEM (Grand Circular Racing Crest - 144px)
+   CENTER BRAND LOGO (Horizontal Racing Mascot)
    ========================================================= */
-.nav-center-emblem {
-  position: absolute;
-  left: 50%;
-  top: 14px;
-  transform: translateX(-50%);
-  z-index: 1010;
+.nav-brand-center {
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  transition: transform var(--transition-fast), top var(--transition-fast);
-}
-
-/* Aerodynamic Wings Connecting Circle to Navbar */
-.emblem-wings-line {
-  height: 2px;
-  width: 50px;
-  position: relative;
-  pointer-events: none;
-}
-
-.left-wing {
-  background: linear-gradient(to left, var(--red-racing) 30%, transparent);
-  box-shadow: 0 0 10px var(--red-racing);
-  margin-right: -4px;
-}
-
-.right-wing {
-  background: linear-gradient(to right, var(--red-racing) 30%, transparent);
-  box-shadow: 0 0 10px var(--red-racing);
-  margin-left: -4px;
-}
-
-/* Enamelled Red-Contoured Circle (Diameter 144px) */
-.emblem-circle-outer {
-  width: 144px;
-  height: 144px;
-  border-radius: 50%;
-  border: 3.5px solid var(--red-racing);
-  background: radial-gradient(circle at 50% 30%, #262638 0%, #12121a 55%, #06060a 100%);
-  box-shadow: 
-    0 0 45px rgba(225, 29, 72, 0.5),
-    0 16px 50px rgba(0, 0, 0, 0.95),
-    inset 0 0 25px rgba(225, 29, 72, 0.45);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  transition: all var(--transition-smooth);
-}
-
-/* Top Crown Notch */
-.emblem-circle-outer::before {
-  content: '';
-  position: absolute;
-  top: -7px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 10px;
-  height: 7px;
-  background: var(--red-racing);
-  clip-path: polygon(0 0, 100% 0, 50% 100%);
-  box-shadow: 0 0 10px var(--red-racing);
-  z-index: 4;
-}
-
-/* Rotating Tech Gauge Ring */
-.emblem-tech-ring {
-  position: absolute;
-  inset: 7px;
-  border-radius: 50%;
-  border: 1px dashed rgba(225, 29, 72, 0.55);
-  pointer-events: none;
-  animation: techRotate 60s linear infinite;
-}
-
-@keyframes techRotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-/* Inner Container for Maximum Artwork Scale */
-.emblem-circle-inner {
-  width: 84%;
-  height: 84%;
-  padding: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 3;
-}
-
-.emblem-logo-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.95));
   transition: transform var(--transition-fast);
-}
-
-/* Micro Brand Ribbon nested at bottom */
-.emblem-bottom-ribbon {
+  padding: 4px 16px;
   position: absolute;
-  bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  background: #09090B;
-  border: 1.5px solid var(--red-racing);
-  color: var(--red-racing);
-  font-family: var(--font-display);
-  font-size: 0.64rem;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  padding: 3px 12px;
-  border-radius: 4px;
-  z-index: 5;
-  text-transform: uppercase;
-  white-space: nowrap;
-  box-shadow: 0 0 15px var(--red-glow), 0 4px 12px rgba(0, 0, 0, 0.95);
+  z-index: 1010;
 }
 
-/* Hover States */
-.nav-center-emblem:hover {
-  transform: translateX(-50%) scale(1.03);
+.nav-brand-center:hover {
+  transform: translateX(-50%) scale(1.05);
 }
 
-.nav-center-emblem:hover .emblem-circle-outer {
-  border-color: #ff2a55;
-  box-shadow: 
-    0 0 55px rgba(225, 29, 72, 0.9),
-    0 20px 60px rgba(0, 0, 0, 0.98),
-    inset 0 0 35px rgba(225, 29, 72, 0.7);
+.nav-logo-img {
+  height: 64px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 14px rgba(225, 29, 72, 0.45));
+  transition: height var(--transition-fast), filter var(--transition-fast);
 }
 
-.nav-center-emblem:hover .emblem-logo-img {
-  transform: scale(1.03);
+.nav-brand-center:hover .nav-logo-img {
+  filter: drop-shadow(0 4px 22px rgba(225, 29, 72, 0.85));
 }
 
-.nav-center-emblem:hover .emblem-bottom-ribbon {
-  background: var(--red-racing);
-  color: #FFFFFF;
-  box-shadow: 0 0 18px var(--red-racing);
-}
-
-/* Scrolled Navbar Adjustment */
-.site-header.scrolled .nav-center-emblem {
-  top: 8px;
-}
-
-.site-header.scrolled .emblem-circle-outer {
-  width: 106px;
-  height: 106px;
-  border-width: 3px;
-}
-
-.site-header.scrolled .emblem-wings-line {
-  width: 35px;
-}
-
-.site-header.scrolled .emblem-bottom-ribbon {
-  font-size: 0.55rem;
-  padding: 2px 8px;
-  bottom: -8px;
+.site-header.scrolled .nav-logo-img {
+  height: 52px;
 }
 
 /* Nav Actions */
@@ -705,7 +573,6 @@ textarea {
   padding: 100px 0;
   position: relative;
   z-index: 2;
-  background-color: #FFFFFF;
 }
 
 .content-container {
@@ -729,7 +596,7 @@ textarea {
 }
 
 .hud-bracket {
-  color: #A1A1AA;
+  color: var(--text-dark);
 }
 
 .section-title {
@@ -737,14 +604,14 @@ textarea {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 900;
   letter-spacing: 0.05em;
-  color: #09090B;
+  color: var(--text-white);
   text-transform: uppercase;
   margin-bottom: 12px;
 }
 
 .section-desc {
   font-size: 1.1rem;
-  color: #52525B;
+  color: var(--text-muted);
   max-width: 620px;
   margin: 0 auto 20px;
 }
@@ -862,9 +729,9 @@ textarea {
 
 /* Service Card (Empty Slot) */
 .service-card.empty-slot {
-  background: #FFFFFF;
-  border: 2px dashed rgba(225, 29, 72, 0.45);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  background: rgba(17, 17, 22, 0.4);
+  border: 2px dashed #45121b;
+  box-shadow: none;
   cursor: pointer;
   align-items: center;
   justify-content: center;
@@ -874,16 +741,16 @@ textarea {
 
 .service-card.empty-slot:hover {
   border-color: var(--red-racing);
-  background: rgba(225, 29, 72, 0.04);
+  background: rgba(225, 29, 72, 0.06);
   transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(225, 29, 72, 0.15);
+  box-shadow: 0 0 20px rgba(225, 29, 72, 0.25);
 }
 
 .empty-slot-icon {
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  border: 2px dashed var(--red-racing);
+  border: 2px dashed #45121b;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -905,13 +772,13 @@ textarea {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #09090B;
+  color: var(--text-white);
   margin-bottom: 8px;
 }
 
 .empty-slot-desc {
   font-size: 0.9rem;
-  color: #52525B;
+  color: var(--text-dark);
   max-width: 260px;
   margin-bottom: 16px;
 }
@@ -941,9 +808,9 @@ textarea {
 }
 
 .filter-chip {
-  background: #F4F4F5;
-  border: 1px solid #E4E4E7;
-  color: #52525B;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
   font-family: var(--font-tech);
   font-size: 0.95rem;
   font-weight: 700;
@@ -955,13 +822,13 @@ textarea {
 }
 
 .filter-chip:hover {
-  color: #09090B;
+  color: var(--text-white);
   border-color: var(--border-racing);
 }
 
 .filter-chip.active {
   background: var(--red-racing);
-  color: #FFFFFF;
+  color: var(--text-white);
   border-color: var(--red-racing);
   box-shadow: 0 0 15px var(--red-glow);
 }
@@ -1126,24 +993,23 @@ textarea {
 .btn-add-work-dashed {
   width: 100%;
   border: 2px dashed var(--red-racing);
-  background: #FFFFFF;
+  background: rgba(225, 29, 72, 0.05);
   padding: 24px;
   border-radius: var(--radius-card);
-  color: #09090B;
+  color: var(--text-white);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 6px;
   cursor: pointer;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
   transition: all var(--transition-fast);
 }
 
 .btn-add-work-dashed:hover {
-  background: rgba(225, 29, 72, 0.05);
+  background: rgba(225, 29, 72, 0.12);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(225, 29, 72, 0.2);
+  box-shadow: 0 0 25px rgba(225, 29, 72, 0.3);
 }
 
 .plus-icon {
@@ -1987,19 +1853,19 @@ textarea {
     gap: 12px;
   }
 
-  .nav-center-emblem {
+  .nav-brand-center {
     position: static;
     transform: none;
+    padding: 0;
   }
 
-  .nav-center-emblem:hover {
+  .nav-brand-center:hover {
     transform: scale(1.04);
   }
 
-  .emblem-circle-outer {
-    width: 68px;
-    height: 68px;
-    border-width: 2px;
+  .nav-logo-img {
+    height: 48px;
+    max-width: 170px;
   }
 
   .btn-mobile-toggle {
