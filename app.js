@@ -939,17 +939,31 @@ function setupScrollToTop() {
 // =========================================================
 // 12C. PRIVACY, COOKIE POLICY & COOKIE BANNER HUD
 // =========================================================
+function acceptCookieConsent() {
+  try {
+    localStorage.setItem('colorbike_cookie_consent', 'accepted');
+  } catch (e) {
+    console.warn('LocalStorage non disponibile', e);
+  }
+  const banner = document.getElementById('cookie-banner');
+  if (banner) {
+    banner.classList.add('hidden');
+    banner.style.display = 'none';
+  }
+}
+window.acceptCookieConsent = acceptCookieConsent;
+
 function setupLegalAndPrivacy() {
   const modal = document.getElementById('modal-legal');
-  const modalTitle = document.getElementById('legal-modal-title');
-  const modalBody = document.getElementById('legal-content-body');
+  const modalTitle = document.getElementById('modal-legal-title') || document.getElementById('legal-modal-title');
+  const modalBody = document.querySelector('.legal-content-body') || document.getElementById('legal-content-body');
   const btnClose = document.getElementById('btn-close-legal');
   const btnConfirm = document.getElementById('btn-confirm-legal');
   const btnOpenPrivacy = document.getElementById('btn-open-privacy');
   const btnOpenCookie = document.getElementById('btn-open-cookie');
   const btnCookieInfo = document.getElementById('btn-cookie-info');
   const banner = document.getElementById('cookie-banner');
-  const btnAcceptCookie = document.getElementById('btn-cookie-accept');
+  const btnAcceptCookie = document.getElementById('btn-accept-cookie') || document.getElementById('btn-cookie-accept');
 
   const PRIVACY_HTML = `
     <h3>Informativa sul Trattamento dei Dati Personali (GDPR)</h3>
@@ -1024,15 +1038,14 @@ function setupLegalAndPrivacy() {
     const consent = localStorage.getItem('colorbike_cookie_consent');
     if (!consent) {
       banner.classList.remove('hidden');
+      banner.style.display = 'block';
     } else {
       banner.classList.add('hidden');
+      banner.style.display = 'none';
     }
 
     if (btnAcceptCookie) {
-      btnAcceptCookie.addEventListener('click', () => {
-        localStorage.setItem('colorbike_cookie_consent', 'accepted');
-        banner.classList.add('hidden');
-      });
+      btnAcceptCookie.addEventListener('click', acceptCookieConsent);
     }
   }
 }

@@ -2491,15 +2491,16 @@ textarea {
   right: 20px;
   max-width: 760px;
   margin: 0 auto;
-  z-index: 1050;
-  background: rgba(17, 17, 22, 0.96);
+  z-index: 9999;
+  background: rgba(17, 17, 22, 0.98);
   backdrop-filter: blur(12px);
   border: 1px solid var(--border-racing);
   border-left: 4px solid var(--red-racing);
   border-radius: var(--radius-card);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85);
   padding: 14px 20px;
   animation: slideUpCookie 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: auto;
 }
 
 .cookie-banner-hud.hidden {
@@ -2545,4 +2546,10 @@ textarea {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.cookie-actions .btn-racing-primary {
+  cursor: pointer;
+  pointer-events: auto;
+  user-select: none;
 }
