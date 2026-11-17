@@ -19,37 +19,37 @@
       "id": 1,
       "status": "active",
       "icon": "spray",
-      "title": "Verniciatura a Forno",
-      "subtitle": "Ciclo termico a regola d'arte",
-      "description": "Verniciatura professionale in cabina a pressione positiva con essiccazione a forno a 65°C. Massima brillantezza, adesione totale su supporti plastici e metallici e resistenza UV estrema per la tua moto stradale.",
-      "tags": ["Tinte Originali OEM", "Finitura Lucida / Opaca", "Trasparente Antigraffio"]
+      "title": "Verniciatura Moto e Scooter",
+      "subtitle": "Ciclo termico a forno a 65°C",
+      "description": "Verniciatura professionale a forno per qualsiasi moto stradale, maxiscooter e scooter. Ripristino tinte originali OEM a campione o a codice, finitura lucida a specchio o opaco profondo con trasparente antigraffio e massima protezione UV.",
+      "tags": ["Tinte Originali OEM", "Moto & Scooter", "Trasparente Antigraffio"]
     },
     {
       "id": 2,
       "status": "active",
-      "icon": "shield",
-      "title": "Riparazione Carene & Plastiche",
-      "subtitle": "Ripristino danni da scivolata o urti",
-      "description": "Saldatura plastica molecolare a caldo per carene OEM in ABS e ricostruzione parti danneggiate. Riparazione crepe, ricostruzione ganci e punti di fissaggio originali senza dover sostituire i pezzi.",
-      "tags": ["Saldatura ABS", "Ricostruzione Ganci", "Riparazione Serbatoi"]
+      "icon": "flag",
+      "title": "Grafiche Personalizzate",
+      "subtitle": "Livree su misura e decalcomanie protette",
+      "description": "Progettazione, intaglio e applicazione di livree su misura, loghi, tabelle porta numero, grafiche sportive e stradali. Sigillatura sotto trasparente per eliminare ogni scalino e garantire brillantezza e durata.",
+      "tags": ["Livree su Misura", "Loghi Sotto Trasparente", "Wrapping & Decal"]
     },
     {
       "id": 3,
       "status": "active",
-      "icon": "flag",
-      "title": "Personalizzazioni & Grafiche",
-      "subtitle": "Look unico per la tua moto",
-      "description": "Personalizzazione estetica su misura: cambi colore completi, dettagli bicolore, grafiche personalizzate protette sotto trasparente o wrapping di precisione per valorizzare la tua moto stradale.",
-      "tags": ["Grafiche su Misura", "Loghi Sotto Trasparente", "Colori Speciali"]
+      "icon": "brush",
+      "title": "Aerografo",
+      "subtitle": "Lavorazioni artistiche a mano libera",
+      "description": "Decorazioni artistiche ad aerografo di precisione assoluta eseguite artigianalmente a mano: sfumature tridimensionali, effetti speciali, fiamme, stemmi e illustrazioni personalizzate su serbatoi, carene e caschi.",
+      "tags": ["Aerografia a Mano", "Effetti 3D & Sfumature", "Caschi & Serbatoi"]
     },
     {
       "id": 4,
-      "status": "empty",
-      "icon": "plus",
-      "title": "Slot Disponibile",
-      "subtitle": "Nuovo servizio in arrivo",
-      "description": "Questo slot è libero per un nuovo servizio dell'officina. Personalizzalo in qualsiasi momento aprendo il Pannello Gestione (Ctrl+Shift+A).",
-      "tags": ["Configurabile da Admin"]
+      "status": "active",
+      "icon": "tuning",
+      "title": "Personalizzazione Totale Moto",
+      "subtitle": "Restyling estetico completo a 360°",
+      "description": "Progetto completo di customizzazione estetica: restyling totale di moto stradali e maxiscooter. Combinazione esclusiva di verniciatura integrale con tinte speciali (metallizzate, perlate o opache), dettagli a contrasto e cerchi coordinati.",
+      "tags": ["Restyling 360°", "Cambi Colore Integrali", "Custom Stradali Uniche"]
     },
     {
       "id": 5,
@@ -83,23 +83,33 @@
     },
     {
       "id": 1002,
-      "title": "Yamaha YZF-R1 — Personalizzazione Estetica Completa",
+      "title": "Yamaha YZF-R1 — Grafiche Personalizzate & Livrea Special",
       "model": "Yamaha YZF-R1M",
-      "category": "livree",
+      "category": "grafiche",
       "date": "2026-09-18",
-      "notes": "Personalizzazione estetica con verniciatura satinata nero profondo, dettagli grafici a contrasto e doppia mano di trasparente opaco protettivo ad alta resistenza chimica.",
+      "notes": "Grafiche personalizzate con verniciatura satinata nero profondo, loghi sportivi sotto trasparente e dettagli a contrasto ad alta resistenza chimica.",
       "beforeImg": "https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?auto=format&fit=crop&w=1200&q=80",
       "afterImg": "https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&w=1200&q=80"
     },
     {
       "id": 1003,
-      "title": "BMW S1000RR — Ricostruzione Cupolino & Parafango",
+      "title": "BMW S1000RR — Personalizzazione Totale Moto Stradale",
       "model": "BMW S1000RR",
-      "category": "riparazione",
+      "category": "personalizzazione",
       "date": "2026-08-30",
-      "notes": "Riparazione cupolino anteriore e parafango con rottura multipla. Ripristino accoppiamenti fari a tolleranza perfetta e riverniciatura nei colori originali Motorsport.",
+      "notes": "Personalizzazione totale: verniciatura completa carene e serbatoio con finitura bicolore racing, dettagli cerchi coordinati e protezione ceramica finale.",
       "beforeImg": "https://images.unsplash.com/photo-1615172282427-9a57ef2d142e?auto=format&fit=crop&w=1200&q=80",
       "afterImg": "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "id": 1004,
+      "title": "Kawasaki Z900 — Dettagli Artistici ad Aerografo & Sfumature 3D",
+      "model": "Kawasaki Z900",
+      "category": "aerografo",
+      "date": "2026-11-05",
+      "notes": "Decorazione serbatoio e puntale eseguita ad aerografo a mano libera con sfumature tridimensionali e giochi di luce su fondo perla, sigillata sotto trasparente lucido a specchio.",
+      "beforeImg": "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1200&q=80",
+      "afterImg": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1200&q=80"
     }
   ],
   "adminPin": "0000"

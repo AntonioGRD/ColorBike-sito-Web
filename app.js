@@ -9,7 +9,7 @@
 // 1. CONFIGURATION & STATE
 // =============================================================================
 const CONFIG = {
-  storageKey: 'colorbike_store_v3',
+  storageKey: 'colorbike_store_v4',
   pinStorageKey: 'colorbike_admin_pin',
   defaultPin: '0000',
   whatsappNumber: '393401234567'
@@ -81,6 +81,12 @@ function getServiceSvgIcon(type) {
       return `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>`;
     case 'flag':
       return `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>`;
+    case 'brush':
+    case 'airbrush':
+      return `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2.12 0 1 0-3-3Z"/><path d="M9 8c-2 3-4 3.5-7 4l8 8c.5-3 1-5 4-7"/><path d="M14.5 17.5 4.5 7.5"/></svg>`;
+    case 'tuning':
+    case 'sparkles':
+      return `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/></svg>`;
     case 'wrench':
       return `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>`;
     case 'bolt':
@@ -326,8 +332,9 @@ function setupQuoteModal() {
   if (waBtn) {
     waBtn.addEventListener('click', () => {
       const bike = document.getElementById('qf-bike').value.trim() || 'la mia moto';
-      const service = document.getElementById('qf-service').value;
-      const text = encodeURIComponent(`Ciao ColorBike! Vorrei informazioni e preventivo per ${service} sulla mia ${bike}. Vi invio anche le foto.`);
+      const serviceSelect = document.getElementById('qf-service');
+      const serviceText = serviceSelect && serviceSelect.selectedIndex >= 0 ? serviceSelect.options[serviceSelect.selectedIndex].text : 'Intervento Estetico';
+      const text = encodeURIComponent(`Ciao ColorBike! Vorrei informazioni e preventivo per "${serviceText}" sulla mia ${bike}. Vi invio anche le foto.`);
       window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${text}`, '_blank');
     });
   }
@@ -339,10 +346,11 @@ function setupQuoteModal() {
       const name = document.getElementById('qf-name').value.trim();
       const phone = document.getElementById('qf-phone').value.trim();
       const bike = document.getElementById('qf-bike').value.trim();
-      const service = document.getElementById('qf-service').value;
+      const serviceSelect = document.getElementById('qf-service');
+      const serviceText = serviceSelect && serviceSelect.selectedIndex >= 0 ? serviceSelect.options[serviceSelect.selectedIndex].text : 'Intervento Estetico';
       const details = document.getElementById('qf-details').value.trim();
 
-      const message = `Richiesta Preventivo ColorBike:\nNome: ${name}\nTel: ${phone}\nMoto: ${bike}\nIntervento: ${service}\nDettagli: ${details}`;
+      const message = `Richiesta Preventivo ColorBike:\nNome: ${name}\nTel: ${phone}\nMoto: ${bike}\nIntervento: ${serviceText}\nDettagli: ${details}`;
       const waUrl = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
       
       showToast('Richiesta inviata! Reindirizzamento a WhatsApp...');
@@ -906,10 +914,10 @@ function getFallbackData() {
       whatsapp: "+393401234567"
     },
     services: [
-      { id: 1, status: "active", icon: "spray", title: "Verniciatura a Forno", description: "Ciclo termico in cabina a pressione positiva a 65°C.", tags: ["Tinte OEM", "Lucido / Opaco"] },
-      { id: 2, status: "active", icon: "shield", title: "Riparazione Carene & Plastiche", description: "Saldatura molecolare e ripristino staffe.", tags: ["ABS", "Serbatoi"] },
-      { id: 3, status: "active", icon: "flag", title: "Personalizzazioni & Grafiche", description: "Design su misura per moto stradali.", tags: ["Grafiche", "Dettagli"] },
-      { id: 4, status: "empty", icon: "plus", title: "Slot Disponibile", description: "Servizio in arrivo.", tags: [] },
+      { id: 1, status: "active", icon: "spray", title: "Verniciatura Moto e Scooter", description: "Ciclo termico a forno a 65°C, tinte originali OEM per ogni moto o scooter.", tags: ["Tinte OEM", "Moto & Scooter"] },
+      { id: 2, status: "active", icon: "flag", title: "Grafiche Personalizzate", description: "Design e livree racing o stradali su misura sigillate sotto trasparente.", tags: ["Livree", "Loghi"] },
+      { id: 3, status: "active", icon: "brush", title: "Aerografo", description: "Lavorazioni artistiche a mano libera, sfumature 3D ed effetti speciali.", tags: ["Aerografia", "Caschi & Serbatoi"] },
+      { id: 4, status: "active", icon: "tuning", title: "Personalizzazione Totale Moto", description: "Restyling estetico completo a 360° per moto stradali e maxiscooter.", tags: ["Restyling 360°", "Cambi Colore"] },
       { id: 5, status: "empty", icon: "plus", title: "Slot Disponibile", description: "Servizio in arrivo.", tags: [] },
       { id: 6, status: "empty", icon: "plus", title: "Slot Disponibile", description: "Servizio in arrivo.", tags: [] }
     ],

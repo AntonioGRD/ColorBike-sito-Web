@@ -1,6 +1,6 @@
 # ColorBike by CARROZZERIA di GATTO VITTORIO 🏍️💨
 
-Web Application ad alte prestazioni sviluppata per **ColorBike by CARROZZERIA di GATTO VITTORIO** (Via Petraro 381, 80050 Santa Maria La Carità NA • P.IVA 09180971211), officina specializzata in verniciatura a forno, riparazione carene in ABS/compositi e rifinitura estetica per moto stradali.
+Web Application ad alte prestazioni sviluppata per **ColorBike by CARROZZERIA di GATTO VITTORIO** (Via Petraro 381, 80050 Santa Maria La Carità NA • P.IVA 09180971211), officina specializzata in verniciatura moto e scooter a forno, grafiche personalizzate, aerografo e personalizzazione totale per moto stradali.
 
 ![ColorBike Logo](logo_horizontal_transparent.png)
 
