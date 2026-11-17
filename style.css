@@ -864,6 +864,35 @@ textarea {
   background: #000;
 }
 
+/* Single Image Visual Stage (per lavori senza confronto prima/dopo) */
+.single-work-stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #09090B;
+}
+
+.single-work-stage .single-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+  display: block;
+}
+
+.portfolio-item:hover .single-work-stage .single-img {
+  transform: scale(1.04);
+}
+
+.ribbon-single {
+  right: 14px;
+  background: rgba(9, 9, 11, 0.85);
+  border: 1px solid var(--border-racing);
+  color: var(--text-white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
 .stage-img {
   position: absolute;
   inset: 0;

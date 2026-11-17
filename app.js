@@ -9,7 +9,7 @@
 // 1. CONFIGURATION & STATE
 // =============================================================================
 const CONFIG = {
-  storageKey: 'colorbike_store_v6',
+  storageKey: 'colorbike_store_v7',
   pinStorageKey: 'colorbike_admin_pin',
   defaultPin: '0000',
   whatsappNumber: '393401234567'
@@ -161,31 +161,52 @@ function renderPortfolio(filterCategory = 'tutti') {
     card.className = 'portfolio-item';
     card.setAttribute('data-id', item.id);
 
-    const beforeSrc = item.beforeImg || 'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1200&q=80';
+    const hasDualSlider = Boolean(
+      item.beforeImg &&
+      item.afterImg &&
+      item.beforeImg.trim() !== '' &&
+      item.afterImg.trim() !== '' &&
+      item.beforeImg !== item.afterImg
+    );
+
     const afterSrc = item.afterImg || 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1200&q=80';
 
-    card.innerHTML = `
-      <div class="slider-stage" data-slider-id="${item.id}">
-        <!-- Immagine PRIMA (sotto) -->
-        <img src="${beforeSrc}" alt="Prima: ${escapeHtml(item.title)}" class="stage-img img-before" loading="lazy" />
-        
-        <!-- Immagine DOPO (sopra con clip-path) -->
-        <img src="${afterSrc}" alt="Dopo: ${escapeHtml(item.title)}" class="stage-img img-after" loading="lazy" />
-        
-        <!-- Red Laser Divider Handle -->
-        <div class="laser-handle">
-          <div class="handle-center-puck">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <path d="m9 18-6-6 6-6M15 6l6 6-6 6"/>
-            </svg>
+    let stageHtml = '';
+    if (hasDualSlider) {
+      const beforeSrc = item.beforeImg;
+      stageHtml = `
+        <div class="slider-stage" data-slider-id="${item.id}">
+          <!-- Immagine PRIMA (sotto) -->
+          <img src="${beforeSrc}" alt="Prima: ${escapeHtml(item.title)}" class="stage-img img-before" loading="lazy" />
+          
+          <!-- Immagine DOPO (sopra con clip-path) -->
+          <img src="${afterSrc}" alt="Dopo: ${escapeHtml(item.title)}" class="stage-img img-after" loading="lazy" />
+          
+          <!-- Red Laser Divider Handle -->
+          <div class="laser-handle">
+            <div class="handle-center-puck">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="m9 18-6-6 6-6M15 6l6 6-6 6"/>
+              </svg>
+            </div>
           </div>
+
+          <!-- Corner Tags -->
+          <span class="ribbon-tag ribbon-before">PRIMA</span>
+          <span class="ribbon-tag ribbon-after">DOPO</span>
         </div>
+      `;
+    } else {
+      stageHtml = `
+        <div class="single-work-stage">
+          <img src="${afterSrc}" alt="${escapeHtml(item.title)}" class="single-img" loading="lazy" />
+          <span class="ribbon-tag ribbon-single">LAVORO ESEGUITO</span>
+        </div>
+      `;
+    }
 
-        <!-- Corner Tags -->
-        <span class="ribbon-tag ribbon-before">PRIMA</span>
-        <span class="ribbon-tag ribbon-after">DOPO</span>
-      </div>
-
+    card.innerHTML = `
+      ${stageHtml}
       <div class="portfolio-details">
         <div class="portfolio-header-row">
           <span class="portfolio-bike-badge">
@@ -202,7 +223,9 @@ function renderPortfolio(filterCategory = 'tutti') {
     `;
 
     container.appendChild(card);
-    setupSliderInteraction(card.querySelector('.slider-stage'));
+    if (hasDualSlider) {
+      setupSliderInteraction(card.querySelector('.slider-stage'));
+    }
   });
 }
 
@@ -374,6 +397,7 @@ function setupQuoteModal() {
 // =========================================================
 function setupAdminPanel() {
   const panel = document.getElementById('admin-panel');
+  if (!panel) return;
   const triggerGear = document.getElementById('btn-admin-trigger');
   const triggerBottom = document.getElementById('btn-admin-bottom');
   const closeBtn = document.getElementById('btn-close-admin');

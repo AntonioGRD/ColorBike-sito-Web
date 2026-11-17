@@ -34,7 +34,7 @@
       <!-- Left Navigation Links (All 3 Sections) -->
       <nav class="nav-left" aria-label="Menu Principale Sinistra">
         <a href="#services" class="nav-item"><span class="nav-num">01</span> SERVIZI</a>
-        <a href="#portfolio" class="nav-item"><span class="nav-num">02</span> PRIMA &amp; DOPO</a>
+        <a href="#portfolio" class="nav-item"><span class="nav-num">02</span> I NOSTRI LAVORI</a>
         <a href="#contacts" class="nav-item"><span class="nav-num">03</span> CONTATTI</a>
       </nav>
 
@@ -54,17 +54,6 @@
           </svg>
         </button>
 
-        <!-- Admin Gear Toggle -->
-        <button type="button" class="btn-gear" id="btn-admin-trigger" title="Pannello Gestione (Ctrl+Shift+A)"
-          aria-label="Accesso Pannello Gestione">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="3"></circle>
-            <path
-              d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
-            </path>
-          </svg>
-        </button>
-
         <!-- Mobile Menu Toggle -->
         <button type="button" class="btn-mobile-toggle" id="btn-mobile-toggle" aria-label="Apri Menu">
           <span></span><span></span><span></span>
@@ -76,7 +65,7 @@
     <!-- Mobile Drawer -->
     <div class="mobile-drawer" id="mobile-drawer">
       <a href="#services" class="mobile-nav-link">SERVIZI</a>
-      <a href="#portfolio" class="mobile-nav-link">PRIMA & DOPO</a>
+      <a href="#portfolio" class="mobile-nav-link">I NOSTRI LAVORI</a>
       <a href="#contacts" class="mobile-nav-link">CONTATTI</a>
       <button type="button" class="btn-racing-cta w-full" id="btn-mobile-quote">RICHIEDI PREVENTIVO</button>
     </div>
@@ -215,7 +204,7 @@
 
 
   <!-- =========================================================
-       4. SEZIONE PORTFOLIO "PRIMA & DOPO"
+       4. SEZIONE PORTFOLIO "I NOSTRI LAVORI"
        ========================================================= -->
   <section class="section-portfolio" id="portfolio">
     <div class="content-container">
@@ -225,9 +214,8 @@
         <div class="heading-tag">
           <span class="hud-bracket">[</span> SEZIONE 02 // GALLERY LAVORI <span class="hud-bracket">]</span>
         </div>
-        <h2 class="section-title">PRIMA &amp; DOPO</h2>
-        <p class="section-desc">I nostri ultimi interventi su moto stradali. Trascina lo slider per confrontare la carena
-          danneggiata con il risultato finito.</p>
+        <h2 class="section-title">I NOSTRI LAVORI</h2>
+        <p class="section-desc">I nostri interventi e progetti su moto stradali, scooter e caschi. Dove disponibile, confronta il Prima e Dopo con lo slider interattivo.</p>
         <div class="red-glow-separator"></div>
       </div>
 
@@ -245,15 +233,6 @@
       <!-- Portfolio Grid -->
       <div class="portfolio-grid" id="portfolio-grid">
         <!-- Card dinamiche generate da app.js -->
-      </div>
-
-      <!-- Slot Aggiungi Lavoro Rapido (Visibile solo se Admin aperto) -->
-      <div class="admin-quick-add hidden" id="admin-portfolio-quick-add">
-        <button type="button" class="btn-add-work-dashed" id="btn-quick-add-work">
-          <span class="plus-icon">+</span>
-          <span class="text-bold">AGGIUNGI NUOVO LAVORO PRIMA &amp; DOPO</span>
-          <span class="subtext">Carica foto Prima/Dopo e pubblica subito nel sito</span>
-        </button>
       </div>
 
     </div>
@@ -413,18 +392,11 @@
 
     </div>
 
-    <!-- Bottom Copyright & Admin Hint -->
+    <!-- Bottom Copyright -->
     <div class="footer-bottom">
       <div class="bottom-inner">
         <p>© <span id="year-label">2026</span> <strong>ColorBike</strong> by <strong>CARROZZERIA di GATTO VITTORIO</strong> • P.IVA 09180971211 • Via Petraro 381, 80050 Santa Maria La Carità (NA) — Tutti i diritti
           riservati.</p>
-        <button type="button" class="admin-discreet-link" id="btn-admin-bottom">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="3"/>
-            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-          </svg>
-          <span>Accesso Gestione Negozio (PIN 0000)</span>
-        </button>
       </div>
     </div>
   </footer>
@@ -493,300 +465,6 @@
           </button>
         </div>
       </form>
-    </div>
-  </div>
-
-
-  <!-- =========================================================
-       7. PANNELLO ADMIN / NO-CODE CMS DI GESTIONE
-       ========================================================= -->
-  <div class="admin-panel-overlay hidden" id="admin-panel" role="dialog" aria-modal="true"
-    aria-labelledby="admin-panel-title">
-    <div class="admin-container">
-
-      <!-- Top Bar Admin -->
-      <div class="admin-topbar">
-        <div class="admin-top-brand">
-          <span class="admin-icon-gear">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="3"/>
-              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-            </svg>
-          </span>
-          <div>
-            <h3 class="admin-title" id="admin-panel-title">PANNELLO GESTIONE &amp; SVILUPPO</h3>
-            <span class="admin-badge-mode" id="admin-session-badge">AUTENTICAZIONE RICHIESTA</span>
-          </div>
-        </div>
-        <button type="button" class="btn-close-admin" id="btn-close-admin" aria-label="Chiudi Pannello">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
-        </button>
-      </div>
-
-      <!-- FASE A: SCHERMATA INSERIMENTO PIN -->
-      <div class="admin-pin-view" id="admin-pin-view">
-        <div class="pin-card">
-          <div class="pin-icon-lock">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
-              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-            </svg>
-          </div>
-          <h4>ACCESSO AMMINISTRATORE</h4>
-          <p>Inserisci il PIN di sicurezza dell'officina per gestire servizi e lavori (PIN Default: <code>0000</code>):
-          </p>
-
-          <div class="pin-inputs-row" id="pin-inputs-row">
-            <input type="password" inputmode="numeric" maxlength="1" class="pin-digit" data-idx="0" autofocus />
-            <input type="password" inputmode="numeric" maxlength="1" class="pin-digit" data-idx="1" />
-            <input type="password" inputmode="numeric" maxlength="1" class="pin-digit" data-idx="2" />
-            <input type="password" inputmode="numeric" maxlength="1" class="pin-digit" data-idx="3" />
-          </div>
-
-          <div class="pin-error-msg hidden" id="pin-error-msg">PIN non corretto. Riprova.</div>
-
-          <button type="button" class="btn-racing-primary w-full mt-4" id="btn-pin-submit">SBLOCCA PANNELLO</button>
-        </div>
-      </div>
-
-      <!-- FASE B: DASHBOARD GESTIONE (Attiva dopo PIN) -->
-      <div class="admin-dashboard-view hidden" id="admin-dashboard-view">
-
-        <!-- Tab Navigation -->
-        <div class="admin-tabs-nav">
-          <button type="button" class="admin-tab-btn active" data-tab="tab-services">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-            GESTIONE SERVIZI &amp; SPECIALIZZAZIONI
-          </button>
-          <button type="button" class="admin-tab-btn" data-tab="tab-portfolio">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
-            CARICA LAVORI PRIMA &amp; DOPO
-          </button>
-          <button type="button" class="admin-tab-btn" data-tab="tab-export">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7M7 3v4a1 1 0 0 0 1 1h7"/></svg>
-            ESPORTA / IMPORTA CONFIG (`data.json`)
-          </button>
-        </div>
-
-        <!-- TAB 1: GESTIONE SERVIZI -->
-        <div class="admin-tab-content active" id="tab-services">
-          <div class="tab-header-box">
-            <h4>GESTISCI I 6 SLOT DEI SERVIZI</h4>
-            <p>Seleziona uno degli slot sottostanti per modificarne il titolo, la descrizione, le caratteristiche o per
-              trasformarlo da <em>Slot Vuoto / In Arrivo</em> a <em>Servizio Attivo</em>.</p>
-          </div>
-
-          <div class="admin-services-list" id="admin-services-list">
-            <!-- Popolata dinamicamente con i 6 slot -->
-          </div>
-
-          <!-- Modale di Modifica Singolo Servizio -->
-          <div class="service-editor-box hidden" id="service-editor-box">
-            <h5 id="editor-service-title">MODIFICA SLOT #1</h5>
-            <form id="form-service-edit">
-              <input type="hidden" id="edit-service-id" />
-              <div class="form-row two-cols">
-                <div class="form-group">
-                  <label for="edit-service-status">Stato dello Slot</label>
-                  <select id="edit-service-status" class="rf-select">
-                    <option value="active">ATTIVO (Visibile come Servizio Completo)</option>
-                    <option value="empty">VUOTO (Slot Tratteggiato "Servizio In Arrivo")</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="edit-service-icon">Icona Tecnica</label>
-                  <select id="edit-service-icon" class="rf-select">
-                    <option value="spray">Verniciatura Moto &amp; Scooter</option>
-                    <option value="flag">Grafiche Personalizzate &amp; Livree</option>
-                    <option value="brush">Aerografo &amp; Dettagli Artistici</option>
-                    <option value="tuning">Personalizzazione Totale Moto</option>
-                    <option value="helmet">Verniciatura Caschi</option>
-                    <option value="shield">Riparazione Incidenti / Scudo ABS</option>
-                    <option value="wrench">Officina Meccanica / Chiave</option>
-                    <option value="bolt">Elettrico / Potenza</option>
-                    <option value="plus">Altra Icona (+)</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="edit-service-name">Titolo del Servizio</label>
-                <input type="text" id="edit-service-name" class="rf-input" required />
-              </div>
-
-              <div class="form-group">
-                <label for="edit-service-desc">Descrizione Dettagliata</label>
-                <textarea id="edit-service-desc" class="rf-textarea" rows="3" required></textarea>
-              </div>
-
-              <div class="form-group">
-                <label for="edit-service-tags">Badge / Punti Chiave (separati da virgola)</label>
-                <input type="text" id="edit-service-tags" class="rf-input"
-                  placeholder="Es. Verniciatura Lucida, Garanzia 2 Anni, Carene ABS" />
-              </div>
-
-              <div class="editor-buttons">
-                <button type="submit" class="btn-racing-primary">SALVA MODIFICHE SLOT</button>
-                <button type="button" class="btn-racing-ghost" id="btn-cancel-service-edit">ANNULLA</button>
-              </div>
-            </form>
-          </div>
-        </div>
-
-        <!-- TAB 2: CARICA LAVORI PRIMA & DOPO -->
-        <div class="admin-tab-content" id="tab-portfolio">
-          <div class="tab-header-box">
-            <h4>PUBBLICA UN NUOVO LAVORO NEL PORTFOLIO</h4>
-            <p>Seleziona le foto dal tuo computer o incolla URL diretti. Lo slider interattivo Prima &amp; Dopo verrà
-              generato istantaneamente sul sito.</p>
-          </div>
-
-          <form class="racing-form" id="form-add-portfolio">
-            <div class="form-row two-cols">
-              <div class="form-group">
-                <label for="work-title">Titolo Lavoro / Intervento *</label>
-                <input type="text" id="work-title" class="rf-input"
-                  placeholder="Es. Restauro Carena Laterale & Verniciatura" required />
-              </div>
-              <div class="form-group">
-                <label for="work-model">Modello Moto *</label>
-                <input type="text" id="work-model" class="rf-input" placeholder="Es. Ducati Streetfighter V4"
-                  required />
-              </div>
-            </div>
-
-            <div class="form-row two-cols">
-              <div class="form-group">
-                <label for="work-category">Categoria Lavoro *</label>
-                <select id="work-category" class="rf-select" required>
-                  <option value="verniciatura">Verniciatura Moto &amp; Scooter</option>
-                  <option value="grafiche">Grafiche Personalizzate</option>
-                  <option value="aerografo">Aerografo</option>
-                  <option value="personalizzazione">Personalizzazione Totale</option>
-                  <option value="caschi">Verniciatura Caschi</option>
-                  <option value="incidenti">Riparazione in caso di Incidenti</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="work-date">Data Completamento</label>
-                <input type="date" id="work-date" class="rf-input" />
-              </div>
-            </div>
-
-            <!-- Upload Box Before & After -->
-            <div class="upload-dual-grid">
-
-              <!-- Foto PRIMA -->
-              <div class="upload-card">
-                <div class="upload-badge before-badge">1. FOTO PRIMA (Danno / Grezza)</div>
-                <div class="preview-box" id="preview-box-before">
-                  <span class="preview-placeholder">Nessuna foto selezionata</span>
-                  <img id="img-preview-before" class="preview-img hidden" alt="Anteprima Prima" />
-                </div>
-                <div class="upload-controls">
-                  <label class="btn-file-upload">
-                    <span>SELEZIONA DA PC</span>
-                    <input type="file" id="file-before" accept="image/*" class="hidden" />
-                  </label>
-                  <input type="url" id="url-before" class="rf-input url-input"
-                    placeholder="o incolla URL immagine..." />
-                </div>
-              </div>
-
-              <!-- Foto DOPO -->
-              <div class="upload-card">
-                <div class="upload-badge after-badge">2. FOTO DOPO (Finito / Verniciato)</div>
-                <div class="preview-box" id="preview-box-after">
-                  <span class="preview-placeholder">Nessuna foto selezionata</span>
-                  <img id="img-preview-after" class="preview-img hidden" alt="Anteprima Dopo" />
-                </div>
-                <div class="upload-controls">
-                  <label class="btn-file-upload">
-                    <span>SELEZIONA DA PC</span>
-                    <input type="file" id="file-after" accept="image/*" class="hidden" />
-                  </label>
-                  <input type="url" id="url-after" class="rf-input url-input" placeholder="o incolla URL immagine..." />
-                </div>
-              </div>
-
-            </div>
-
-            <div class="form-group mt-3">
-              <label for="work-notes">Note Tecniche Intervento</label>
-              <textarea id="work-notes" class="rf-textarea" rows="3"
-                placeholder="Descrivi il procedimento (es. saldatura plastica, stuccatura, ciclo a forno, tipo vernice)..."></textarea>
-            </div>
-
-            <button type="submit" class="btn-racing-primary w-full mt-3">
-              <span class="btn-text">PUBBLICA LAVORO NELLA GALLERY</span>
-            </button>
-          </form>
-
-          <!-- Lista Lavori Esistenti da Eliminare se necessario -->
-          <div class="existing-works-mgmt mt-5">
-            <h5>LAVORI ATTUALMENTE PUBBLICATI</h5>
-            <div class="works-mgmt-list" id="works-mgmt-list">
-              <!-- Popolato dinamicamente da app.js -->
-            </div>
-          </div>
-        </div>
-
-        <!-- TAB 3: ESPORTA / IMPORTA CONFIG -->
-        <div class="admin-tab-content" id="tab-export">
-          <div class="tab-header-box">
-            <h4>PERSISTENZA DEI DATI E DISTRIBUZIONE</h4>
-            <p>Tutte le modifiche che fai vengono salvate automaticamente nella memoria del tuo browser
-              (<code>localStorage</code>). Quando hai ultimato i servizi e i lavori, <strong>scarica il file
-                <code>data.json</code></strong> e sostituiscilo nella cartella del sito prima di caricarlo su Aruba o
-              GitHub Pages.</p>
-          </div>
-
-          <div class="export-actions-grid">
-
-            <div class="export-card">
-              <div class="export-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
-                </svg>
-              </div>
-              <h5>ESPORTA CONFIGURAZIONE</h5>
-              <p>Scarica il file <code>data.json</code> aggiornato con tutti i tuoi nuovi servizi, testi e foto dei
-                lavori.</p>
-              <button type="button" class="btn-racing-primary w-full" id="btn-export-json">
-                SCARICA DATA.JSON DEFINITIVO
-              </button>
-            </div>
-
-            <div class="export-card">
-              <div class="export-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/>
-                </svg>
-              </div>
-              <h5>IMPORTA CONFIGURAZIONE</h5>
-              <p>Carica un file <code>data.json</code> per ripristinare o sincronizzare i contenuti tra dispositivi
-                diversi.</p>
-              <label class="btn-racing-ghost w-full block text-center cursor-pointer">
-                <span>CARICA DATA.JSON</span>
-                <input type="file" id="input-import-json" accept=".json" class="hidden" />
-              </label>
-            </div>
-
-          </div>
-
-          <div class="security-box mt-4">
-            <h5>CAMBIA PIN DI ACCESSO</h5>
-            <div class="pin-change-row">
-              <input type="password" id="input-new-pin" maxlength="6" placeholder="Nuovo PIN (4-6 cifre)"
-                class="rf-input w-auto" />
-              <button type="button" class="btn-racing-ghost" id="btn-save-new-pin">AGGIORNA PIN</button>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
     </div>
   </div>
 

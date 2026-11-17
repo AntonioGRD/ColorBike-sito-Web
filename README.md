@@ -1,20 +1,21 @@
-# ColorBike by CARROZZERIA di GATTO VITTORIO 🏍️💨
+# ColorBike by CARROZZERIA di GATTO VITTORIO
 
-Web Application ad alte prestazioni sviluppata per **ColorBike by CARROZZERIA di GATTO VITTORIO** (Via Petraro 381, 80050 Santa Maria La Carità NA • P.IVA 09180971211), officina specializzata in verniciatura moto e scooter a forno, grafiche personalizzate, aerografo, personalizzazione totale moto, verniciatura caschi e riparazione carene in caso di incidenti.
+Web Application ad alte prestazioni sviluppata per **ColorBike by CARROZZERIA di GATTO VITTORIO** (Via Petraro 381, 80050 Santa Maria La Carità NA • P.IVA 09180971211), officina specializzata in verniciatura moto e scooter a forno, grafiche personalizzate, aerografo, personalizzazione totale moto stradali, verniciatura caschi e riparazione carene in caso di incidenti.
 
 ![ColorBike Logo](logo_horizontal_transparent.png)
 
 ---
 
-## 🏁 Caratteristiche Principali
+## Caratteristiche Principali
 
-- **Design System Dark-Racing**:
-  - Palette cromatica: Nero Asfalto (`#09090B`), Grigio Tecnico (`#A1A1AA`) e Rosso Corsa (`#DC2626` / `#E11D48`).
-  - Font tecnici: **Orbitron** (display aggressivo), **Rajdhani** (tipografia sportiva) e **Inter** (massima leggibilità).
+- **Design System Dark-Racing & Clean**:
+  - Palette cromatica: Sfondo Bianco pulito (`#FFFFFF`), componenti Nero Asfalto (`#09090B`), Grigio Tecnico (`#A1A1AA`) e Rosso Corsa (`#DC2626` / `#E11D48`).
+  - Tipografia: **Rajdhani** (sportiva e tecnica), **Orbitron** (display racing per titoli) e **Inter** (massima leggibilità per dati commerciali e testi).
   - Logo orizzontale trasparente con telemetria e raccordi aerodinamici nella barra superiore.
+  - Iconografia minimalista SVG vettoriale (zero emoji, stile professionale).
   
 - **Hero Section**:
-  - Box officina racing con illuminazione d'atmosfera e superbike sportiva ad altissima risoluzione.
+  - Box officina con illuminazione d'atmosfera e moto sportiva stradale ad altissima risoluzione.
   - Badge di telemetria per le 6 specializzazioni ufficiali.
   - Pulsante interattivo *Configura la tua moto* con form preventivo e redirect rapido WhatsApp.
 
@@ -22,23 +23,22 @@ Web Application ad alte prestazioni sviluppata per **ColorBike by CARROZZERIA di
   1. Verniciatura Moto e Scooter (Ciclo termico a forno a 65°C)
   2. Grafiche Personalizzate (Livree su misura e loghi sotto trasparente)
   3. Aerografo (Lavorazioni artistiche a mano libera, sfumature 3D)
-  4. Personalizzazione Totale Moto (Restyling estetico completo a 360°)
+  4. Personalizzazione Totale Moto (Restyling estetico completo a 360° per moto stradali)
   5. Verniciatura Caschi (Integrali, jet e modulari, grafiche replica)
   6. Riparazione in caso di Incidenti (Saldatura ABS, raddrizzatura serbatoi)
 
-- **Gallery "Prima & Dopo" Interattiva**:
-  - Slider con laser divider centrale trascinabile (mouse e touch screen) per confrontare carene prima e dopo la lavorazione.
-  - Filtri per categoria (*Verniciatura*, *Riparazione*, *Livree Racing*).
+- **Gallery "I Nostri Lavori" con Slider Prima/Dopo Condizionale**:
+  - Per i lavori con foto prima e dopo (riparazione incidenti o restauro carene), slider interattivo con laser divider centrale trascinabile.
+  - Per i lavori artistici o grafiche custom, elegante visualizzazione fotografica singola in alta definizione con badge "LAVORO ESEGUITO".
+  - Filtri per categoria (*Tutti i Lavori*, *Verniciatura*, *Grafiche Personalizzate*, *Aerografo*, *Personalizzazione Totale*, *Verniciatura Caschi*, *Riparazione Incidenti*).
 
-- **Pannello Gestione / No-Code CMS Integrato**:
-  - Accesso protetto da PIN (Default: `0000`) tramite icona ⚙ o scorciatoia `Ctrl + Shift + A`.
-  - Gestione in tempo reale dei 6 slot dei servizi.
-  - Upload e pubblicazione immediata di nuovi lavori Prima/Dopo con anteprima foto.
-  - **Esportazione & Importazione `data.json`**: scarica la configurazione aggiornata con un click e sostituiscila nel repository per rendere definitivi tutti i contenuti senza bisogno di un database esterno.
+- **Social & Contatti Ufficiali**:
+  - Icone social minimali collegate a Instagram (`@color.bike`), TikTok (`@colorbike`) e Facebook (`Colorbike`).
+  - Dati commerciali completi di Partita IVA, orari di apertura e mappa interattiva Google Maps integrata.
 
 ---
 
-## 🚀 Come Pubblicare su GitHub Pages (Hosting Gratuito)
+## Come Pubblicare su GitHub Pages (Hosting Gratuito)
 
 L'applicazione è 100% statica (HTML5, CSS3, Vanilla JS), quindi perfetta per **GitHub Pages** a costo zero e con caricamento istantaneo:
 
@@ -66,24 +66,25 @@ L'applicazione è 100% statica (HTML5, CSS3, Vanilla JS), quindi perfetta per **
 
 ---
 
-## 🛠️ Struttura dei File
+## Struttura dei File
 
 ```text
 ColorBike sito Web/
-├── index.html              # Struttura semantica completa e accessibile
-├── style.css               # Design system dark-racing modulare
-├── app.js                  # Logica slider, filtri, preventivo e pannello CMS
-├── data.json               # Database locale dei servizi e dei lavori
-├── logo1.jpeg              # Logo originale
-├── logo_transparent.png    # Logo scontornato trasparente ad alta risoluzione
-├── .gitignore              # Esclusioni file temporanei/sistema
-└── README.md               # Documentazione del progetto
+├── index.html                       # Struttura semantica completa e accessibile
+├── style.css                        # Design system dark-racing modulare
+├── app.js                           # Logica slider condizionale, filtri e preventivo
+├── data.json                        # Database locale dei servizi e dei lavori
+├── logo_horizontal_transparent.png  # Logo orizzontale trasparente ufficiale
+├── logo_transparent.png             # Logo trasparente
+├── .gitignore                       # Esclusioni file temporanei/sistema
+└── README.md                        # Documentazione del progetto
 ```
 
 ---
 
-## 📞 Contatti Officina
-- **Brand**: ColorBike — Carrozzeria Gatto
-- **Sede**: Via Torino 42, Rivalta di Torino (TO)
-- **Email**: info@colorbike.it
-- **Assistenza / Foto Danni**: [WhatsApp Diretto](https://wa.me/393401234567)
+## Informazioni Commerciali & Contatti Officina
+- **Ragione Sociale**: ColorBike by CARROZZERIA di GATTO VITTORIO
+- **Indirizzo**: Via Petraro 381, 80050 Santa Maria La Carità (NA)
+- **Partita IVA**: 09180971211
+- **Orari di apertura**: Dal lunedì al venerdì 8:30 - 13:00 e 14:30 - 19:00
+- **Social**: [Instagram](https://www.instagram.com/color.bike/) • [TikTok](https://www.tiktok.com/@colorbike) • [Facebook](https://www.facebook.com/p/Colorbike-100055205113946/?locale=it_IT)
