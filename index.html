@@ -194,9 +194,21 @@
         <div class="red-glow-separator"></div>
       </div>
 
-      <!-- Subcategory Tabs Bar (Leggera e Veloce) -->
-      <div class="portfolio-subnav" id="portfolio-subnav">
-        <!-- Generato dinamicamente con badge conteggio da app.js -->
+      <!-- Subcategory Tabs Bar con Affordance di Scorrimento Mobile -->
+      <div class="portfolio-subnav-wrapper">
+        <div class="subnav-scroll-hint" aria-hidden="true">
+          <svg class="scroll-hint-arrow left" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="m15 18-6-6 6-6"/>
+          </svg>
+          <span>SCORRI CATEGORIE</span>
+          <svg class="scroll-hint-arrow right" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="m9 18 6-6-6-6"/>
+          </svg>
+        </div>
+        <div class="portfolio-subnav" id="portfolio-subnav">
+          <!-- Generato dinamicamente con badge conteggio da app.js -->
+        </div>
+        <div class="subnav-fade-edge subnav-fade-right" aria-hidden="true"></div>
       </div>
 
       <!-- Portfolio Grid -->

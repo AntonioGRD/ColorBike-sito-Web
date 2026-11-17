@@ -842,6 +842,19 @@ textarea {
 }
 
 /* Portfolio Subnavigation (Leggera, Compatta, Senza Appesantire) */
+.portfolio-subnav-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.subnav-scroll-hint {
+  display: none;
+}
+
+.subnav-fade-edge {
+  display: none;
+}
+
 .portfolio-subnav {
   display: flex;
   align-items: center;
@@ -2248,28 +2261,107 @@ textarea {
   }
 
   /* Mobile Portfolio Subnav & Responsiveness */
+  .portfolio-subnav-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .subnav-scroll-hint {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--font-tech);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    background: rgba(225, 29, 72, 0.08);
+    border: 1px solid rgba(225, 29, 72, 0.28);
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin: 0 auto 12px auto;
+    width: fit-content;
+    text-transform: uppercase;
+  }
+
+  .subnav-scroll-hint span {
+    color: var(--text-primary);
+  }
+
+  .scroll-hint-arrow {
+    color: var(--red-racing);
+  }
+
+  .scroll-hint-arrow.right {
+    animation: bounceArrowRight 1.4s infinite ease-in-out;
+  }
+
+  .scroll-hint-arrow.left {
+    animation: bounceArrowLeft 1.4s infinite ease-in-out;
+  }
+
+  @keyframes bounceArrowRight {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(4px); }
+  }
+
+  @keyframes bounceArrowLeft {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-4px); }
+  }
+
   .portfolio-subnav {
     justify-content: flex-start;
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    padding: 6px 12px 14px;
-    margin-left: -12px;
-    margin-right: -12px;
-    margin-bottom: 24px;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    padding: 6px 14px 12px;
+    margin-left: -14px;
+    margin-right: -14px;
+    margin-bottom: 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--red-racing) rgba(255, 255, 255, 0.08);
   }
 
   .portfolio-subnav::-webkit-scrollbar {
-    display: none;
+    height: 4px;
+    display: block;
+  }
+
+  .portfolio-subnav::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 4px;
+    margin: 0 16px;
+  }
+
+  .portfolio-subnav::-webkit-scrollbar-thumb {
+    background: var(--red-racing);
+    border-radius: 4px;
+    box-shadow: 0 0 8px var(--red-glow);
+  }
+
+  .subnav-fade-edge {
+    display: block;
+    position: absolute;
+    bottom: 8px;
+    top: 36px;
+    width: 30px;
+    pointer-events: none;
+    z-index: 4;
+  }
+
+  .subnav-fade-right {
+    right: -14px;
+    background: linear-gradient(to right, transparent, #09090B);
   }
 
   .subnav-pill {
     white-space: nowrap;
     flex-shrink: 0;
-    font-size: 0.82rem;
-    padding: 7px 14px;
+    font-size: 0.84rem;
+    padding: 8px 15px;
   }
 
   .nav-social-strip {
